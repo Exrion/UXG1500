@@ -44,6 +44,11 @@ public class GameManager : Singleton<GameManager>
 
     public void PrepareScene(int sceneIdx)
     {
+        if (SceneManager.GetActiveScene().path == m_SceneList[sceneIdx])
+        {
+            SceneManagement.Instance.ReloadScene();
+            return;
+        }
         m_NextScene = m_SceneList[sceneIdx];
         SceneManagement.Instance.PushLoadScene(m_NextScene);
     }

@@ -19,7 +19,10 @@ public class DebugGUI : Singleton<DebugGUI>
         for (int i = 0; i < GameManager.Instance.GetSceneList().Count; i++)
         {
             if (GUI.Button(new Rect(20, 40 + i * 30, 80, 20), (i + 1).ToString()))
+            {
                 GameManager.Instance.PrepareScene(i);
+                GameManager.Instance.ArmSceneSwitch();
+            }
         }
     }
 

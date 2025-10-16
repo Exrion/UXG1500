@@ -47,6 +47,8 @@ public class SceneManagement : Singleton<SceneManagement>
             return false;
     }
 
+    public void ReloadScene() => SceneManager.LoadScene(SceneManager.GetActiveScene().path);
+
     private IEnumerator LoadSceneAsync(string path)
     {
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(path, LoadSceneMode.Additive);
