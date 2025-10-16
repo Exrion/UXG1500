@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,9 +16,12 @@ public class SceneManagement : Singleton<SceneManagement>
     private string m_SceneToLoad = "";
     private string m_SceneToUnload = "";
 
-    private void Start()
+    protected override void Start()
     {
-        
+        base.Start();
+        Logger.Log("Initialised " + MethodBase.GetCurrentMethod().ReflectedType.Name,
+            Logger.SEVERITY_LEVEL.INFO,
+            Logger.LOGGER_OPTIONS.SIMPLE);
     }
 
     private void Update()
@@ -37,6 +42,11 @@ public class SceneManagement : Singleton<SceneManagement>
 
     public bool SetActiveScene(string path)
     {
+        Logger.Log("Active scene set from path: " + path,
+            Logger.SEVERITY_LEVEL.INFO,
+            Logger.LOGGER_OPTIONS.VERBOSE,
+            MethodBase.GetCurrentMethod());
+
         string curPath = SceneManager.GetActiveScene().path;
         if (SceneManager.SetActiveScene(SceneManager.GetSceneByPath(path)))
         {
@@ -47,10 +57,22 @@ public class SceneManagement : Singleton<SceneManagement>
             return false;
     }
 
-    public void ReloadScene() => SceneManager.LoadScene(SceneManager.GetActiveScene().path);
+    public void ReloadScene()
+    {
+        Logger.Log("Reloading Current Scene",
+            Logger.SEVERITY_LEVEL.INFO,
+            Logger.LOGGER_OPTIONS.VERBOSE,
+            MethodBase.GetCurrentMethod());
+        SceneManager.LoadScene(SceneManager.GetActiveScene().path);
+    }
 
     private IEnumerator LoadSceneAsync(string path)
     {
+        Logger.Log("Loading Scene from path: " + path,
+            Logger.SEVERITY_LEVEL.INFO,
+            Logger.LOGGER_OPTIONS.VERBOSE,
+            MethodBase.GetCurrentMethod());
+
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(path, LoadSceneMode.Additive);
         while (!asyncOperation.isDone) 
         {
@@ -58,10 +80,20 @@ public class SceneManagement : Singleton<SceneManagement>
             yield return null;
         }
         onSceneLoaded?.Invoke();
+
+        Logger.Log("Scene loaded from path: " + path,
+            Logger.SEVERITY_LEVEL.INFO,
+            Logger.LOGGER_OPTIONS.VERBOSE,
+            MethodBase.GetCurrentMethod());
     }
 
     private IEnumerator UnloadSceneAsync(string path)
     {
+        Logger.Log("Unloading Scene from path: " + path,
+            Logger.SEVERITY_LEVEL.INFO,
+            Logger.LOGGER_OPTIONS.VERBOSE,
+            MethodBase.GetCurrentMethod());
+
         AsyncOperation asyncOperation = SceneManager.UnloadSceneAsync(path);
         while (!asyncOperation.isDone) 
         {
@@ -69,5 +101,10 @@ public class SceneManagement : Singleton<SceneManagement>
             yield return null;
         }
         onSceneUnloaded?.Invoke();
+
+        Logger.Log("Scene unloaded from path: " + path,
+            Logger.SEVERITY_LEVEL.INFO,
+            Logger.LOGGER_OPTIONS.VERBOSE,
+            MethodBase.GetCurrentMethod());
     }
 }

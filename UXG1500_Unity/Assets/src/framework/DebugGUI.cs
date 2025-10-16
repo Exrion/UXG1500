@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,6 +12,14 @@ public class DebugGUI : Singleton<DebugGUI>
     public static Func<float, float> RelW => ConvertRelativeWidth;
     private static float ConvertRelativeHeight(float pc) => Screen.height * pc;
     public static Func<float, float> RelH => ConvertRelativeHeight;
+
+    protected override void Start()
+    {
+        base.Start();
+        Logger.Log("Initialised " + MethodBase.GetCurrentMethod().ReflectedType.Name,
+            Logger.SEVERITY_LEVEL.INFO,
+            Logger.LOGGER_OPTIONS.SIMPLE);
+    }
 
     private void DrawDebug()
     {

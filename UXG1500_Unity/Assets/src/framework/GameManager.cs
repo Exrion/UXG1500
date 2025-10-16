@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,8 +20,13 @@ public class GameManager : Singleton<GameManager>
     public void SetNextScene(string path) => m_NextScene = path;
     public List<string> GetSceneList() => m_SceneList;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        Logger.Log("Initialised " + MethodBase.GetCurrentMethod().ReflectedType.Name, 
+            Logger.SEVERITY_LEVEL.INFO, 
+            Logger.LOGGER_OPTIONS.SIMPLE);
+        
         if (m_SceneList.Count > 0)
         {
             PrepareScene(0);
@@ -32,7 +39,11 @@ public class GameManager : Singleton<GameManager>
         if (m_ReadySceneSwitch && SceneManager.GetSceneByPath(m_NextScene).isLoaded)
         {
             // Switch Scenes
-            SceneManagement.Instance.SetActiveScene(m_NextScene);
+            if (!SceneManagement.Instance.SetActiveScene(m_NextScene))
+                Logger.Log("Scene " + m_NextScene + " has not yet been loaded! Unable to switch scenes",
+                    Logger.SEVERITY_LEVEL.WARNING,
+                    Logger.LOGGER_OPTIONS.VERBOSE,
+                    MethodBase.GetCurrentMethod());
 
             // Toggle back to false;
             m_ReadySceneSwitch = false;
@@ -55,6 +66,11 @@ public class GameManager : Singleton<GameManager>
 
     public void HandleGamePause(bool pause)
     {
+        Logger.Log("Current Scene Paused",
+            Logger.SEVERITY_LEVEL.INFO,
+            Logger.LOGGER_OPTIONS.VERBOSE,
+            MethodBase.GetCurrentMethod());
+
         m_GameState = pause;
         if (pause)
             Time.timeScale = 0f;
