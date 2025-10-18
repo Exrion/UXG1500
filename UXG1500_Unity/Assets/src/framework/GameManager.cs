@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +13,8 @@ public class GameManager : Singleton<GameManager>
     private List<string> m_SceneList;
     [SerializeField]
     private int m_FirstSceneToLoad;
+    [SerializeField]
+    private string m_StartupScenePath;
     private string m_NextScene;
 
     public bool m_GameState { get; private set; } = true;
@@ -26,12 +30,9 @@ public class GameManager : Singleton<GameManager>
         Logger.Log("Initialised " + MethodBase.GetCurrentMethod().ReflectedType.Name, 
             Logger.SEVERITY_LEVEL.INFO, 
             Logger.LOGGER_OPTIONS.SIMPLE);
-        
-        if (m_SceneList.Count > 0)
-        {
-            PrepareScene(0);
-            m_ReadySceneSwitch = true;
-        }
+
+        // Unload all unecessary scenes and load the default assigned index.
+        StartupSequence();
     }
 
     private void Update()
@@ -50,6 +51,19 @@ public class GameManager : Singleton<GameManager>
 
             // Pause till ready to play
             HandleGamePause(true);
+        }
+    }
+
+    private void StartupSequence()
+    {
+        // Unload
+        SceneManagement.Instance.UnloadAllScenes(m_StartupScenePath);
+
+        // Load
+        if (m_SceneList.Count > 0)
+        {
+            PrepareScene(0);
+            m_ReadySceneSwitch = true;
         }
     }
 
@@ -80,6 +94,11 @@ public class GameManager : Singleton<GameManager>
 
     public void HandleSceneLoaded()
     {
-        // Handle scene loaded callback
+        
+    }
+
+    public void HandleSceneUnloaded()
+    {
+        
     }
 }

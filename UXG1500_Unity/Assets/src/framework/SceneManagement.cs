@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
@@ -31,6 +32,7 @@ public class SceneManagement : Singleton<SceneManagement>
             StartCoroutine(LoadSceneAsync(m_SceneToLoad));
             m_SceneToLoad = "";
         }
+
         if (m_SceneToUnload != "")
         {
             StartCoroutine(UnloadSceneAsync(m_SceneToUnload));
@@ -39,6 +41,7 @@ public class SceneManagement : Singleton<SceneManagement>
     }
 
     public void PushLoadScene(string path) => m_SceneToLoad = path;
+    public void PushUnloadScene(string path) => m_SceneToUnload = path;
 
     public bool SetActiveScene(string path)
     {
@@ -55,6 +58,18 @@ public class SceneManagement : Singleton<SceneManagement>
         }
         else
             return false;
+    }
+
+    public void UnloadAllScenes(string exceptPath = "")
+    {
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            Scene scene = SceneManager.GetSceneAt(i);
+            if (scene.name != exceptPath)
+            {
+                SceneManager.UnloadSceneAsync(scene);
+            }
+        }
     }
 
     public void ReloadScene()

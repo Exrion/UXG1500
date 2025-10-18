@@ -166,7 +166,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onSceneUnloaded:
+    m_PersistentCalls:
+      m_Calls: []
   onSceneLoadProgress:
+    m_PersistentCalls:
+      m_Calls: []
+  onSceneUnloadProgress:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &370117485
@@ -216,6 +222,7 @@ MonoBehaviour:
   - Assets/Scenes/S3_CozyModern.unity
   - Assets/Scenes/VR_World.unity
   m_FirstSceneToLoad: 0
+  m_StartupScenePath: Assets/Scenes/_Startup.unity
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

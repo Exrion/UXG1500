@@ -37,6 +37,11 @@ public class Singleton<T> : MonoBehaviour where T : Component
        
     }
 
+    protected virtual void Init()
+    {
+
+    }
+
     protected virtual void InitialiseSingleton()
     {
         if (!Application.isPlaying) return;
