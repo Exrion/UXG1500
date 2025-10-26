@@ -62,7 +62,7 @@ public class GameManager : Singleton<GameManager>
         // Load
         if (m_SceneList.Count > 0)
         {
-            PrepareScene(0);
+            PrepareScene(m_FirstSceneToLoad);
             m_ReadySceneSwitch = true;
         }
     }
