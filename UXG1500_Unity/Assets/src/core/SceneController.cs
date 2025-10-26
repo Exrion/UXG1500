@@ -15,7 +15,6 @@ public class SceneController : MonoBehaviour
     [SerializeField] int m_ChunkPoolSize = 256;
 
     GameObject[] m_ChunkPool;
-    int m_ChunkPoolCount = 0;
     List<int> m_ChunkPoolFree = new();
     Queue<GameObject> m_InactiveChunks = new();
     Vector3Int m_PreviousPlayerPosition;
@@ -107,12 +106,10 @@ public class SceneController : MonoBehaviour
             return;
         }
         int idx = PopFreeIndex();
-
         m_ChunkPool[idx] = m_InactiveChunks.Dequeue();
         m_ChunkPool[idx].GetComponent<FloorData>().m_Index = idx;
         SetFloorPosition(m_ChunkPool[idx], floorPosition);
         m_ChunkPool[idx].SetActive(true);
-        m_ChunkPoolCount++;
     }
 
     void SetInactiveInPool(GameObject obj)
@@ -122,7 +119,6 @@ public class SceneController : MonoBehaviour
         m_InactiveChunks.Enqueue(obj);
         m_ChunkPool[obj.GetComponent<FloorData>().m_Index] = null;
         AppendFreeIndex(obj.GetComponent<FloorData>().m_Index);
-        m_ChunkPoolCount--;
     }
 
     int PopFreeIndex()
