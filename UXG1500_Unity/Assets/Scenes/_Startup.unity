@@ -221,7 +221,7 @@ MonoBehaviour:
   - Assets/Scenes/S2_InfWater.unity
   - Assets/Scenes/S3_CozyModern.unity
   - Assets/Scenes/VR_World.unity
-  m_FirstSceneToLoad: 3
+  m_FirstSceneToLoad: 0
   m_StartupScenePath: Assets/Scenes/_Startup.unity
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

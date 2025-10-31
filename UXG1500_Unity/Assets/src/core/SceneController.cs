@@ -8,28 +8,49 @@ public class SceneController : MonoBehaviour
 {
     [SerializeField] Transform m_PlayerTransform;
     [SerializeField] Transform m_SceneProps;
+    [SerializeField] float m_PropDistance;
+    [SerializeField] float m_PropFollowIncrement;
     [SerializeField] Transform m_FloorParent;
     [SerializeField] float m_GenerationDistance;
     [SerializeField] GameObject m_FloorPrefab;
     [SerializeField] float m_FloorDistance;
     [SerializeField] int m_ChunkPoolSize = 256;
 
+    Renderer m_Renderer;
     GameObject[] m_ChunkPool;
     List<int> m_ChunkPoolFree = new();
     Queue<GameObject> m_InactiveChunks = new();
     Vector3Int m_PreviousPlayerPosition;
+    Vector3 m_PreviousPlayerPositionFloat;
 
     void Start()
     {
+        m_Renderer = GetComponent<Renderer>();
         m_PreviousPlayerPosition = new(0, -1, 0);
         InitPool();
     }
 
     void Update()
     {
+        // fUCKK IT WE BALL
+        PropsFollow();
+
         if (!UpdatePlayerPosition()) return;
         GenerateChunks();
         ClearChunks();
+    }
+
+    void PropsFollow()
+    {
+        if (m_PreviousPlayerPositionFloat != m_PlayerTransform.position)
+        {
+            if (Vector3.Distance(m_SceneProps.position, m_PlayerTransform.position) > m_PropDistance && !m_Renderer.isVisible)
+            {
+                Vector3 direction = (m_PlayerTransform.position - m_SceneProps.position).normalized;
+                m_SceneProps.position += m_PropFollowIncrement * direction;
+            }
+            m_PreviousPlayerPositionFloat = m_PlayerTransform.position;
+        }
     }
 
     void InitPool()
