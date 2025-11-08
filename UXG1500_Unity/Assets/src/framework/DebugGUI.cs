@@ -23,11 +23,14 @@ public class DebugGUI : Singleton<DebugGUI>
 
     private void DrawDebug()
     {
-        GUI.Box(new Rect(10, 10, 100, 150), "Debug Menu");
+        GUI.Box(new Rect(10, 10, 100, 100 + GameManager.Instance.GetSceneList().Count * 20), "Debug Menu");
+
+        if (GUI.Button(new Rect(20, 40, 80, 20), "Play/Pause"))
+            GameManager.Instance.HandleGamePause(!GameManager.Instance.m_GameState);
 
         for (int i = 0; i < GameManager.Instance.GetSceneList().Count; i++)
         {
-            if (GUI.Button(new Rect(20, 40 + i * 30, 80, 20), (i + 1).ToString()))
+            if (GUI.Button(new Rect(20, 70 + i * 30, 80, 20), (i + 1).ToString()))
             {
                 GameManager.Instance.PrepareScene(i);
                 GameManager.Instance.ArmSceneSwitch();
