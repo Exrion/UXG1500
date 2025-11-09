@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_PropDistance: 30
   m_PropFollowIncrement: 0.2
   m_FloorParent: {fileID: 901318989}
-  m_GenerationDistance: 120
+  m_GenerationDistance: 200
   m_FloorPrefab: {fileID: 3677589785128339980, guid: 75f64678366eb23428bf472e3cd28e7c, type: 3}
   m_FloorDistance: 50
   m_ChunkPoolSize: 256
