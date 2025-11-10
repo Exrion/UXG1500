@@ -1,0 +1,20 @@
+VisualElement {
+}
+
+.ActionItem {
+    flex-grow: 1;
+    left: initial;
+    flex-direction: row;
+}
+
+.ActionItem_Image {
+    flex-grow: 1;
+    width: 30px;
+    height: 30px;
+}
+
+.ActionItem_Label {
+    flex-grow: 1;
+    -unity-font-definition: url("project://database/Assets/lib/fonts/CuteNotebookPersonalUse-7OAEV.ttf?fileID=12800000&guid=88c4448307202d44a9da1ae6cec6e927&type=3#CuteNotebookPersonalUse-7OAEV");
+    -unity-text-align: middle-left;
+}
