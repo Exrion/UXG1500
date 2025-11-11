@@ -56,7 +56,7 @@ public abstract class IInteractable : MonoBehaviour
     {
         m_InteractHoldTime = inputHoldTime;
         m_InProgress = true;
-        Debug.Log("Interaction Started");
+        //Debug.Log("Interaction Started");
     }
 
     public void HandleInteractionPerformed()
@@ -68,7 +68,7 @@ public abstract class IInteractable : MonoBehaviour
     public virtual void HandleInteractionCancelled()
     {
         ResetProgress();
-        Debug.Log("Interaction Cancelled");
+        //Debug.Log("Interaction Cancelled");
     }
 
     private void ResetProgress()
