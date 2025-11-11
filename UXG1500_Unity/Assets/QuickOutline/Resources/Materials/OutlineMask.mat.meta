@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f58cf65ea995c4b45be95713bdea8134
-timeCreated: 1522540975
+guid: 106f3ff43a17d4967a2b64c7a92e49ec
+timeCreated: 1520576276
 licenseType: Store
 NativeFormatImporter:
   externalObjects: {}
@@ -13,5 +13,5 @@ AssetOrigin:
   productId: 115488
   packageName: Quick Outline
   packageVersion: 1.1
-  assetPath: Assets/pkg/QuickOutline/Samples/Materials/Plane.mat
+  assetPath: Assets/QuickOutline/Resources/Materials/OutlineMask.mat
   uploadId: 485303
