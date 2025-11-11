@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VR_World.unity
     guid: ae0d581aea49a5149b392ef6449106d8
+  - enabled: 1
+    path: Assets/CRTBootScene.unity
+    guid: 1226d190b6bfe1543b9692a3d629647c
+  - enabled: 1
+    path: Assets/CRTGameScene.unity
+    guid: 4721d9e16eeffa24da20cdb8f91d683b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
