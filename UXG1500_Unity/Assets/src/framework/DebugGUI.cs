@@ -41,7 +41,7 @@ public class DebugGUI : Singleton<DebugGUI>
     private void OnGUI()
     {
 #if UNITY_EDITOR
-        DrawDebug();
+        //DrawDebug();
 #endif
     }
 }
