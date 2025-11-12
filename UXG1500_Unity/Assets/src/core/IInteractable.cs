@@ -16,7 +16,7 @@ public abstract class IInteractable : MonoBehaviour
     private float m_InteractHoldTimeCurrent;
     private bool m_InProgress;
 
-    private void Start()
+    protected virtual void Start()
     {
         m_OutlineScript = GetComponent<Outline>();
         m_OutlineScript.enabled = false;
