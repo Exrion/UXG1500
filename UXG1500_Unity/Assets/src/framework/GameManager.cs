@@ -16,6 +16,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private string m_StartupScenePath;
     private string m_NextScene;
+    [SerializeField]
+    private bool m_PauseOnSceneSwitch;
 
     public bool m_GameState { get; private set; } = true;
     public bool m_ReadySceneSwitch { get; private set; } = false;
@@ -50,7 +52,8 @@ public class GameManager : Singleton<GameManager>
             m_ReadySceneSwitch = false;
 
             // Pause till ready to play
-            HandleGamePause(true);
+            if (m_PauseOnSceneSwitch)
+                HandleGamePause(true);
         }
     }
 
@@ -62,20 +65,21 @@ public class GameManager : Singleton<GameManager>
         // Load
         if (m_SceneList.Count > 0)
         {
-            PrepareScene(m_FirstSceneToLoad);
-            m_ReadySceneSwitch = true;
+            if (PrepareScene(m_FirstSceneToLoad))
+                m_ReadySceneSwitch = true;
         }
     }
 
-    public void PrepareScene(int sceneIdx)
+    public bool PrepareScene(int sceneIdx)
     {
         if (SceneManager.GetActiveScene().path == m_SceneList[sceneIdx])
         {
             SceneManagement.Instance.ReloadScene();
-            return;
+            return false;
         }
         m_NextScene = m_SceneList[sceneIdx];
         SceneManagement.Instance.PushLoadScene(m_NextScene);
+        return true;
     }
 
     public void HandleGamePause(bool pause)

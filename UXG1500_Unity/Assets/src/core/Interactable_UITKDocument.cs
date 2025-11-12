@@ -1,8 +1,25 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
-class IInteractable_UITKDocument : IInteractable
-{    public override void OnInteracted()
+class Interactable_UITKDocument : IInteractable
+{
+    [SerializeField]
+    private UIDocument m_UIDocument;
+
+    public override void OnInteracted()
     {
-        //Debug.Log("Interaction Performed");
+        if (m_UIDocument == null)
+        {
+            Logger.Log("UIDocument not assigned in gameobject!",
+                Logger.SEVERITY_LEVEL.ERROR,
+                Logger.LOGGER_OPTIONS.VERBOSE,
+                System.Reflection.MethodBase.GetCurrentMethod());
+            return;
+        }
+
+        if (m_UIDocument.rootVisualElement.style.display == DisplayStyle.Flex)
+            m_UIDocument.rootVisualElement.style.display = DisplayStyle.None;
+        else
+            m_UIDocument.rootVisualElement.style.display = DisplayStyle.Flex;
     }
 }
