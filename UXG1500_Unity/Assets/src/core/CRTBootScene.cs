@@ -164,6 +164,7 @@ public class TerminalBootController : MonoBehaviour
         finished = false;
 
         Debug.Log("Boot sequence complete. Loading next scene...");
-    	SceneManager.LoadScene("CRTGameScene");
+        FindObjectOfType<CRTUIManager>().OnBootCompleteAnyKey();
+
     }
 }
