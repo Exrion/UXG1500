@@ -759,7 +759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   m_PlayerTransform: {fileID: 346283973}
   m_SceneProps: {fileID: 1977075743}
-  m_PropDistance: 25
+  m_PropDistance: 20
   m_PropFollowIncrement: 0.2
   m_FloorParent: {fileID: 1358478568}
   m_GenerationDistance: 40
@@ -987,7 +987,7 @@ Transform:
   m_GameObject: {fileID: 1977075742}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
