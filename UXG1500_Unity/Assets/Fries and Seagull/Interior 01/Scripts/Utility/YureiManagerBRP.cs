@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using Seagull.Interior_I1.Inspector;
+
 #if UNITY_EDITOR
 using Seagull.Interior_01.Utility.Inspector;
 #endif
