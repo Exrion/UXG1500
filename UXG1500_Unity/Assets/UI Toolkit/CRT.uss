@@ -1,0 +1,86 @@
+/* Root */
+.crt-root {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  font-family: "Consolas", monospace;
+  position: absolute;
+}
+
+/* Overlay that fades to give the screen lighting up effect */
+.overlay {
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background-color: #000000;
+  opacity: 1; /* script will animate this */
+  pointer-events: none;
+}
+
+/* Centered content */
+.content {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 10%;
+  bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Container for the multiple lines */
+.lines-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Each line style */
+.crt-line {
+  color: #00ff66;
+  font-size: 16px;
+  text-shadow: 0 0 8px rgba(0,255,102,0.6);
+  white-space: pre; /* keep spacing */
+  opacity: 0; /* script fades lines in */
+}
+
+/* Prompt */
+.prompt {
+  margin-top: 18px;
+  color: #00ff66;
+  font-size: 14px;
+  opacity: 0;
+  text-shadow: 0 0 8px rgba(0,255,102,0.6);
+}
+
+/* hidden helper */
+.hidden {
+  display: none;
+}
+
+/* Scanlines overlay - repeating stripes */
+.scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 3px,
+    rgba(0, 255, 102, 0.02) 3px,
+    rgba(0, 0, 0, 0) 4px
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+/* small pulse animation for subtle CRT flicker (script can toggle class to intensify) */
+@keyframes crtFlicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.92; }
+  100% { opacity: 1; }
+}
+.crt-root {
+  animation: crtFlicker 0.3s infinite;
+}
