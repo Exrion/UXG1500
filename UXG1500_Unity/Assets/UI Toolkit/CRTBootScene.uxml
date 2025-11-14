@@ -1,5 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/CRT.uss?fileID=7433441132597879392&amp;guid=52f4a604f913e254a8ca450018308e59&amp;type=3#CRT" />
+    <Style src="project://database/Assets/UI/CRT.uss?fileID=7433441132597879392&amp;guid=52f4a604f913e254a8ca450018308e59&amp;type=3#CRT" />
+    <Style src="project://database/Assets/UI/CRTGlobalFont.uss?fileID=7433441132597879392&amp;guid=f348b40b3335cc344a1f02ae04f3f029&amp;type=3#CRTGlobalFont" />
     <ui:VisualElement name="root" class="crt-root" style="flex-grow: 1;">
         <ui:VisualElement name="screenOverlay" class="overlay" />
         <ui:VisualElement name="content" class="content">
