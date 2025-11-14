@@ -10,6 +10,11 @@ public abstract class IInteractable : MonoBehaviour
     private Interactable_Script m_InteractableScript;
     [SerializeField]
     private UIDocument m_InteractableDocument;
+    [SerializeField]
+    [Tooltip("Only required if Disable HUD On Interact is checked.")]
+    private UIDocument m_HUDDocument;
+    [SerializeField]
+    private bool m_disableHUDOnInteract;
 
     private Outline m_OutlineScript;
     private float m_InteractHoldTime;
@@ -63,6 +68,10 @@ public abstract class IInteractable : MonoBehaviour
     {
         ResetProgress();
         OnInteracted();
+        if (m_disableHUDOnInteract && m_HUDDocument != null)
+        {
+            m_HUDDocument.rootVisualElement.style.display = DisplayStyle.None;
+        }
     }
 
     public virtual void HandleInteractionCancelled()
