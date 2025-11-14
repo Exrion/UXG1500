@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "VT323";
+    src: url("project://database/Assets/Fonts/VT323-Regular.ttf");
+}
+
+/* Apply VT323 globally */
+* {
+    font-family: "VT323";
+    color: #00ff66;
+    text-shadow:
+        0 0 2px #00ff66,
+        0 0 6px #00ff66,
+        0 0 10px #00ff66;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+/* Optional: fine-tune for better alignment in UI Toolkit */
+.label, .unity-button, .unity-text-field {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* CRT Background & green scanline effect (optional shared) */
+.crt-root {
+    background-color: black;
+    font-size: 16px;
+}

@@ -1,0 +1,356 @@
+.crt-root {
+    background-color: black;
+    color: #00ff66;
+    font-family: "Consolas", monospace;
+    text-shadow: 0 0 4px #00ff66;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.crt-frame {
+    border: 3px solid #00ff66;
+    width: 95%;
+    height: 90%;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.9); /* keeps the dark CRT look */
+    box-shadow: 0 0 8px #00ff66;
+}
+
+.crt-frame::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid #00ff66;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+
+/* Title */
+.crt-title {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 12px;
+}
+
+/* ----- Top display area ----- */
+.display-area {
+    flex-grow: 1;
+    position: relative;
+    border: 2px solid #00ff66;
+    margin-bottom: 10px;
+}
+
+/* Stick figure character */
+.character-body {
+    position: absolute;
+    bottom: 15px;
+    left: 70px;
+    width: 25px;
+    height: 60px;
+    border-width: 3px;
+    border-color: #00ff66;
+    border-style: solid;
+    border-top-width: 0;
+    background-color: rgba(0,255,0,0.01);
+}
+
+.character-head {
+    position: absolute;
+    top: -25px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border-width: 3px;
+    border-color: #00ff66;
+    border-style: solid;
+    background-color: rgba(0,255,0,0.01);
+}
+
+/* Mountains */
+.hill-large,
+.hill-small {
+    position: absolute;
+    bottom: 15px;
+    border-width: 3px;
+    border-color: #00ff66;
+    border-style: solid;
+    background-color: rgba(0,255,0,0.01);
+}
+
+.hill-large {
+    left: 160px;
+    width: 240px;
+    height: 150px;
+    border-top-left-radius: 240px;
+    border-top-right-radius: 240px;
+}
+
+.hill-small {
+    left: 370px;
+    width: 140px;
+    height: 100px;
+    border-top-left-radius: 140px;
+    border-top-right-radius: 140px;
+}
+
+.ground-line {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #00ff66;
+}
+
+/* ----- Bottom area ----- */
+.bottom-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35%;
+}
+
+/* Three partitioned panels */
+.character-list-panel,
+.details-panel,
+.control-panel {
+    border: 2px solid #00ff66;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: inset 0 0 8px rgba(0,255,102,0.3);
+}
+
+/* Create the dividing box layout exactly like the retro terminal */
+.character-list-panel {
+    flex-basis: 28%;
+    margin-right: 5px;
+}
+
+.details-panel {
+    flex-basis: 45%;
+    margin-right: 5px;
+}
+
+.control-panel {
+    flex-basis: 22%;
+}
+
+/* Panel title */
+.panel-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Character list section */
+.character-scroll {
+    flex-grow: 1;
+    border-top: 1px solid #00ff66;
+    border-bottom: 1px solid #00ff66;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.character-items {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.character-item {
+    color: #00ff66;
+    padding: 4px 8px;
+}
+
+.character-item.selected {
+    background-color: rgba(0, 255, 102, 0.3);
+}
+
+/* Details text */
+.details-text {
+    color: #00ff66;
+    white-space: pre-wrap;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.dialogue-option {
+    color: #00ff66;
+    background-color: rgba(0,255,0,0.1);
+    border: 1px solid #00ff66;
+    padding: 4px 8px;
+    margin-top: 4px;
+    font-family: "Consolas", monospace;
+    text-align: left;
+}
+
+.dialogue-option:hover {
+    background-color: rgba(0,255,0,0.3);
+}
+
+/* Control instructions */
+.control-panel {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.control-text {
+    margin: 4px 0;
+}
+
+
+
+/* Hide dialogue until triggered */
+.dialogue-area {
+    display: none;
+}
+
+
+
+/* Force all borders to render in runtime */
+.crt-frame,
+.display-area,
+.character-list-panel,
+.details-panel,
+.control-panel {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #00ff66;
+    background-color: rgba(0, 0, 0, 0.05); /* ensures visibility */
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+/* Ensure everything inside the CRT frame inherits green lines */
+* {
+    border-color: #00ff66;
+    border-style: solid;
+}
+
+/* =======================
+   Dialogue Area Styling
+   ======================= */
+.dialogue-area {
+    display: none;
+    border: 2px solid #00ff66;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 8px rgba(0, 255, 102, 0.4);
+    padding: 8px;
+    margin-top: 6px;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 20%;
+    width: 95%;
+    align-self: center;
+}
+
+/* Dialogue text message */
+.dialogue-text {
+    color: #00ff66;
+    font-size: 14px;
+    text-shadow: 0 0 4px #00ff66;
+    margin-bottom: 6px;
+
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+/* Dialogue option buttons */
+.dialogue-options {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dialogue-option {
+    background-color: transparent;
+    color: #00ff66;
+    border: 1px solid #00ff66;
+    text-align: left;
+    font-family: "Consolas", monospace;
+    padding: 2px 6px;
+    text-shadow: 0 0 3px #00ff66;
+    transition: background-color 0.15s;
+}
+
+.dialogue-option:hover,
+.dialogue-option:focus {
+    background-color: #00ff66;
+    color: black;
+    font-weight: bold;
+}
+
+
+.floppy-disk {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 60px;
+    bottom: 55px;
+}
+
+/* main outline */
+.disk-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-width: 2px;
+    border-color: #00ff66;
+    border-style: solid;
+    background-color: rgba(0, 255, 102, 0.05);
+}
+
+/* little top-left notch */
+.disk-notch {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: #00ff66;
+}
+
+/* diagonal top-right corner cut */
+.disk-corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    transform: rotate(45deg);
+    border-top: 2px solid #00ff66;
+    border-right: 2px solid #00ff66;
+}
+
+#dialogueText {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+button {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.dialogueAreaHidden {
+    background-color: rgba(0,0,0,0) !important;
+    border-width: 0 !important;
+}
