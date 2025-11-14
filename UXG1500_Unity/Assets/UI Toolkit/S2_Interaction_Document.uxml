@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/S2_Interaction_Style.uss?fileID=7433441132597879392&amp;guid=4bdf8862985671f4f93747cde6309eea&amp;type=3#S2_Interaction_Style" />
+    <ui:VisualElement name="Root" style="flex-grow: 1;">
+        <ui:VisualElement name="WindowHead_Decorator" style="flex-grow: 1; position: absolute; width: 100%; height: 0.5%; background-color: rgb(255, 255, 255);" />
+        <ui:VisualElement name="WindowHead" style="flex-grow: 1; position: absolute; width: 100%; height: 6%; flex-direction: row; padding-top: 3px; padding-bottom: 3px; padding-left: 5px; background-color: rgb(48, 87, 209); -unity-text-outline-width: 0; padding-right: 8px;">
+            <ui:Label text="DarkMode Blog - DigiPen ProMax Explorer&#10;" name="WindowTitle" style="-unity-font-definition: url(&quot;project://database/Assets/lib/fonts/ARIAL.TTF?fileID=12800000&amp;guid=4317aac6925b84c4080ef83346796ae0&amp;type=3#ARIAL&quot;); font-size: 14px; color: rgb(255, 255, 255); -unity-text-align: middle-left; -unity-font-style: bold;" />
+            <ui:VisualElement name="Buttons" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/src/core/art/S2_Buttons.png?fileID=2800000&amp;guid=3c08a380e6541ae4798e1c216a7e18fe&amp;type=3#S2_Buttons&quot;); background-size: contain; background-position-x: right 0;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Taskbar" style="flex-grow: 1; position: absolute;" />
+        <ui:VisualElement name="Container" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

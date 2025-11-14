@@ -10,6 +10,16 @@ public abstract class IInteractable : MonoBehaviour
     private Interactable_Script m_InteractableScript;
     [SerializeField]
     private UIDocument m_InteractableDocument;
+    [SerializeField]
+    [Tooltip("Only required if Disable HUD On Interact is checked.")]
+    private UIDocument m_HUDDocument;
+    [SerializeField]
+    [Tooltip("Only required if Disable FPS Controller On Interact is checked.")]
+    private FirstPersonController m_FPSController;
+    [SerializeField]
+    private bool m_disableHUDOnInteract;
+    [SerializeField]
+    private bool m_disableFPSControllerOnInteract;
 
     private Outline m_OutlineScript;
     private float m_InteractHoldTime;
@@ -63,6 +73,21 @@ public abstract class IInteractable : MonoBehaviour
     {
         ResetProgress();
         OnInteracted();
+        if (m_disableHUDOnInteract && m_HUDDocument != null)
+            ToggleHUD();
+        if (m_disableFPSControllerOnInteract && m_FPSController != null)
+            ToggleFPSController();
+    }
+
+    protected void ToggleHUD()
+    {
+        m_HUDDocument.rootVisualElement.style.display = DisplayStyle.None;
+    }
+
+    protected void ToggleFPSController()
+    {
+        m_FPSController.cameraCanMove = !m_FPSController.cameraCanMove;
+        m_FPSController.playerCanMove = !m_FPSController.playerCanMove;
     }
 
     public virtual void HandleInteractionCancelled()
