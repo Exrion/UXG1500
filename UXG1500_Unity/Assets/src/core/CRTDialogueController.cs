@@ -404,7 +404,10 @@ public class CRTDialogueController : MonoBehaviour
         // Example:
         // SceneManager.LoadScene("CRTGameScene_2");
 
-        Debug.Log("Next scene loading triggered!");
+        //Debug.Log("Next scene loading triggered!");
+
+        GameManager.Instance.PrepareScene(1);
+        GameManager.Instance.ArmSceneSwitch();
 
         // If you want to fade out, you can put animation here
     }
