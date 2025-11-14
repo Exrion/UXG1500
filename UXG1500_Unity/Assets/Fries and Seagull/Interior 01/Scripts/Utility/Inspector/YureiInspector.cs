@@ -1,5 +1,6 @@
 ﻿#if UNITY_EDITOR
 
+using Seagull.Interior_I1.Inspector;
 using System;
 using System.Reflection;
 using Unity.VisualScripting;
