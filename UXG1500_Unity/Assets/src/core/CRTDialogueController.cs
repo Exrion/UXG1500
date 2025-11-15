@@ -27,8 +27,20 @@ public class CRTDialogueController : MonoBehaviour
     private int dialogueStage = 0;
     private int floppyPage = 1;
 
-    // Track playback for pages 1–3
     private bool[] hasPlayedPage = new bool[4];
+
+    // ============================================================
+    // DIALOGUE BOX HEIGHT CONTROL
+    // ============================================================
+    private void ExpandDialogueArea()
+    {
+        dialogueArea.style.height = new Length(28, LengthUnit.Percent); // prevents overflow
+    }
+
+    private void ResetDialogueArea()
+    {
+        dialogueArea.style.height = new Length(20, LengthUnit.Percent); // original height
+    }
 
     // ============================================================
     // ON ENABLE
@@ -50,7 +62,6 @@ public class CRTDialogueController : MonoBehaviour
         hillSmall = root.Q<VisualElement>("hillSmall");
         floppyDisk = root.Q<VisualElement>("floppyDisk");
 
-        // Create Door Element
         door = new VisualElement();
         door.name = "door";
         door.style.position = Position.Absolute;
@@ -76,7 +87,7 @@ public class CRTDialogueController : MonoBehaviour
     }
 
     // ============================================================
-    // APPLY CRT FONT TO UI TREE
+    // APPLY FONT
     // ============================================================
     private void ApplyCRTFont(VisualElement ve)
     {
@@ -86,8 +97,7 @@ public class CRTDialogueController : MonoBehaviour
             ve.style.fontSize = 18;
         }
 
-        foreach (var child in ve.Children())
-            ApplyCRTFont(child);
+        foreach (var child in ve.Children()) ApplyCRTFont(child);
     }
 
     // ============================================================
@@ -97,6 +107,8 @@ public class CRTDialogueController : MonoBehaviour
     {
         if (dialogueActive) return;
         dialogueActive = true;
+
+        ResetDialogueArea(); // ⬅ ensure small height for intro
 
         dialogueArea.style.display = DisplayStyle.Flex;
         dialogueText.text = "Welcome! You’ve now entered the matrix!";
@@ -151,7 +163,7 @@ public class CRTDialogueController : MonoBehaviour
     }
 
     // ============================================================
-    // FLOPPY CHOICE LOGIC
+    // FLOPPY CHOICE
     // ============================================================
     private void HandleFloppyChoice(int choice)
     {
@@ -205,7 +217,7 @@ public class CRTDialogueController : MonoBehaviour
     }
 
     // ============================================================
-    // PROCESSING SEQUENCES
+    // PROCESSING
     // ============================================================
     private IEnumerator SikeProcessing()
     {
@@ -252,13 +264,14 @@ public class CRTDialogueController : MonoBehaviour
         floppyPage = page;
         dialogueStage = 3;
 
+        ExpandDialogueArea(); // ⬅ expands to fit text + buttons
+
         string title = "Data in the Floppy Disk:\n";
         string text = GetFloppyText(page);
 
         DisableOptions();
         dialogueText.text = title;
 
-        // Play animation only first time
         if (!hasPlayedPage[page])
         {
             hasPlayedPage[page] = true;
@@ -281,6 +294,8 @@ public class CRTDialogueController : MonoBehaviour
     {
         floppyPage = page;
         dialogueStage = 3;
+
+        ExpandDialogueArea(); // ⬅ instant version too
 
         string title = "Data in the Floppy Disk:\n";
         string text = GetFloppyText(page);
@@ -320,37 +335,31 @@ public class CRTDialogueController : MonoBehaviour
     }
 
     // ============================================================
-    // DOOR SEQUENCE (FIXED!)
+    // DOOR SEQUENCE
     // ============================================================
     private IEnumerator SpawnDoorSequence()
     {
         dialogueStage = 4;
 
-        // ⭐ Hide box using USS class (layout stays intact)
-        dialogueArea.AddToClassList("dialogueAreaHidden");
+        ResetDialogueArea(); // ⬅ return to small height
 
+        dialogueArea.AddToClassList("dialogueAreaHidden");
         DisableOptions();
 
-        // Show "Oh!" as raw text
         dialogueText.text = "Oh!";
         dialogueText.style.fontSize = 18;
 
         yield return new WaitForSeconds(0.6f);
 
-        // ⭐ Restore original dialogue box style
         dialogueArea.RemoveFromClassList("dialogueAreaHidden");
-
-        // Now show actual door line
         dialogueText.text = "Oh! A door appeared.";
 
-        // Show door
         door.style.display = DisplayStyle.Flex;
         door.style.left = characterX + 150f;
         door.style.bottom = 15f;
 
         yield return new WaitForSeconds(0.6f);
 
-        // Show options
         option1.text = "> Go around it";
         option2.text = "> Proceed with caution";
 
@@ -359,7 +368,6 @@ public class CRTDialogueController : MonoBehaviour
 
         EnableOptions();
     }
-
 
     // ============================================================
     // WALK THROUGH DOOR
@@ -381,22 +389,20 @@ public class CRTDialogueController : MonoBehaviour
             yield return null;
         }
 
-        // Character disappears
         character.style.display = DisplayStyle.None;
 
-        // ⭐ NEW: show goodbye message
+        ResetDialogueArea(); // ⬅ back to small height
+
         dialogueText.text = "Goodbye!";
         dialogueArea.style.display = DisplayStyle.Flex;
 
         yield return new WaitForSeconds(1.2f);
 
-        // ⭐ NEW: transition out
         LoadNextScene();
     }
 
-
     // ============================================================
-    // TO LOAD DA THE SCENE
+    // NEXT SCENE
     // ============================================================
     private void LoadNextScene()
     {
@@ -411,7 +417,6 @@ public class CRTDialogueController : MonoBehaviour
 
         // If you want to fade out, you can put animation here
     }
-
 
     // ============================================================
     // BUTTON CONTROL
