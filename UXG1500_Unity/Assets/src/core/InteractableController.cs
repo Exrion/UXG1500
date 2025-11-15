@@ -6,8 +6,7 @@ using UnityEngine.InputSystem;
 
 public class InteractableController : MonoBehaviour
 {
-    [SerializeField]
-    private float m_InteractionDistance;
+    public float m_InteractionDistance;
     [SerializeField]
     private Camera m_Camera;
     [SerializeField]
@@ -91,6 +90,7 @@ public class InteractableController : MonoBehaviour
             if (hit.collider.TryGetComponent(out IInteractable interactable))
             {
                 m_CurrentInteractable = interactable;
+                m_CurrentInteractable.InjectSwivel(m_Camera, m_InteractionDistance);
                 interactable.HandleInteractionStarted(m_InteractionHoldTime);
                 break;
             }
