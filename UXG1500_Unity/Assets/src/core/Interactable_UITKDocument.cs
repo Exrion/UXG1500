@@ -6,6 +6,14 @@ class Interactable_UITKDocument : IInteractable
     [SerializeField]
     private UIDocument m_UIDocument;
 
+    protected override void Start()
+    {
+        base.Start();
+
+        if (m_UIDocument != null)
+            m_UIDocument.rootVisualElement.style.display = DisplayStyle.None;
+    }
+
     public override void OnInteracted()
     {
         if (m_UIDocument == null)
