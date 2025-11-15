@@ -85,7 +85,7 @@ public abstract class IInteractable : MonoBehaviour
     private void SwivelToCamera()
     {
         m_InteractableScript.transform.position = m_ChildOrigin;
-        m_InteractableScript.transform.forward = -m_Camera.transform.forward;
+        m_InteractableScript.transform.LookAt(m_Camera.transform);
         RaycastHit[] hits = Physics.RaycastAll(
             m_Camera.transform.position, 
             transform.position - m_Camera.transform.position, 
