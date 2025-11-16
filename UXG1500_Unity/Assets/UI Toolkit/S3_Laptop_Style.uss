@@ -1,0 +1,129 @@
+VisualElement {
+}
+
+.Small1_Light {
+    -unity-font-definition: url("project://database/Assets/lib/fonts/CuteNotebookPersonalUse-7OAEV.ttf?fileID=12800000&guid=88c4448307202d44a9da1ae6cec6e927&type=3#CuteNotebookPersonalUse-7OAEV");
+    font-size: 16px;
+    color: rgb(46, 46, 46);
+    transition-duration: 2s;
+    transition-delay: 0.1s;
+    transition-property: color;
+    transition-timing-function: ease;
+}
+
+.Title2_Light {
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 5px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0);
+    font-size: 48px;
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-SemiBold.ttf?fileID=12800000&guid=18941a68aa1a4014fbcb62be64436692&type=3#Geist-SemiBold");
+    transition-duration: 2s;
+    transition-delay: 0.1s;
+    transition-property: color;
+    transition-timing-function: ease;
+}
+
+.Title1_Light {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    color: rgba(0, 0, 0, 0);
+    font-size: 96px;
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/otf/Geist-Bold.otf?fileID=12800000&guid=687332127aedd234192bc3e7bd32c3df&type=3#Geist-Bold");
+    transition-duration: 2s;
+    transition-delay: 0.1s;
+    transition-property: color;
+    transition-timing-function: ease;
+}
+
+.Title2_Dark {
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 5px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0);
+    font-size: 48px;
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-SemiBold.ttf?fileID=12800000&guid=18941a68aa1a4014fbcb62be64436692&type=3#Geist-SemiBold");
+    transition-duration: 2s;
+    transition-delay: 0.1s;
+    transition-property: color;
+    transition-timing-function: ease;
+}
+
+.Title1_Dark {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    color: rgba(255, 255, 255, 0);
+    font-size: 96px;
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/otf/Geist-Bold.otf?fileID=12800000&guid=687332127aedd234192bc3e7bd32c3df&type=3#Geist-Bold");
+    transition-duration: 2s;
+    transition-delay: 0.1s;
+    transition-property: color;
+    transition-timing-function: ease;
+}
+
+.Background {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    transition-duration: 2s;
+    transition-delay: 0.1s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+}
+
+.FlexRow {
+    flex-grow: 1;
+    width: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    flex-basis: auto;
+    align-self: auto;
+    height: auto;
+    opacity: 0.75;
+}
+
+.AlphaDark255 {
+    color: rgb(0, 0, 0);
+}
+
+.AlphaWhite255 {
+    color: rgb(255, 255, 255);
+}
+
+.AlphaOffWhite255 {
+    color: rgb(226, 226, 226);
+}
+
+.BackgroundBlack {
+    background-color: rgb(0, 0, 0);
+}
+
+.BackgroundSlate {
+    background-color: rgb(30, 30, 30);
+}

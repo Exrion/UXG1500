@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/S3_Laptop_Style.uss?fileID=7433441132597879392&amp;guid=14533ccee387c214795fe1cdcb535b0d&amp;type=3#S3_Laptop_Style" />
+    <ui:VisualElement name="Background" class="Background" />
+    <ui:VisualElement name="Instructions" style="flex-direction: row; justify-content: flex-end; position: absolute; width: 100%; top: 644px; left: 0;">
+        <ui:Label text="↓" name="Arrows" class="Small1_Light" style="font-size: 16px; -unity-font-definition: url(&quot;project://database/Assets/lib/fonts/CuteNotebookPersonalUse-7OAEV.ttf?fileID=12800000&amp;guid=88c4448307202d44a9da1ae6cec6e927&amp;type=3#CuteNotebookPersonalUse-7OAEV&quot;);" />
+        <ui:Label text="Use the down arrow to scroll!" name="InstructionText" class="Small1_Light" />
+    </ui:VisualElement>
+    <ui:VisualElement name="Root" style="flex-grow: 1; width: 100%; height: 591px; background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement name="Container" style="flex-grow: 1; padding-right: 48px; padding-left: 48px; padding-top: 24px; padding-bottom: 24px; width: 100%; height: 100%; align-items: flex-start; justify-content: flex-start;" />
+    </ui:VisualElement>
+</ui:UXML>
