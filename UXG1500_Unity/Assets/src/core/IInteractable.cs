@@ -55,7 +55,7 @@ public abstract class IInteractable : MonoBehaviour
                 MethodBase.GetCurrentMethod());
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         // Progress Radial
         if (m_InProgress && m_InteractableScript != null)

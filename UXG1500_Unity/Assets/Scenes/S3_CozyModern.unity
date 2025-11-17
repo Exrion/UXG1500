@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 7c6697a3d51c9324c8e9ad3284a1ac04, type: 2}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 684383174}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3730,6 +3730,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 68b68b52a4f4f1e4b96bcab5daaf1aec, type: 3}
   m_PrefabInstance: {fileID: 1249802629}
   m_PrefabAsset: {fileID: 0}
+--- !u!108 &501648932 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 2298852301075171323, guid: 7232880492f88cd4d9624a501fc37aba, type: 3}
+  m_PrefabInstance: {fileID: 1866543002}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &505781731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3867,6 +3872,17 @@ MonoBehaviour:
   m_disableHUDOnInteract: 0
   m_FPSController: {fileID: 0}
   m_disableFPSControllerOnInteract: 0
+  m_Sun: {fileID: 684383174}
+  m_TransitionSpeed: 5
+  m_Filter: {r: 0.6226415, g: 0.28189546, b: 0.20265219, a: 0}
+  m_Temperature: 4000
+  m_Intensity: 0.2
+  m_IndirectMultiplier: 1
+  m_Lights:
+  - {fileID: 1817070878}
+  - {fileID: 501648932}
+  - {fileID: 882475063}
+  m_LightIntensityFactor: -0.5
 --- !u!114 &520610258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5511,7 +5527,7 @@ Light:
   serializedVersion: 11
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5554,7 +5570,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 4789.74
+  m_ColorTemperature: 15000
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -7094,6 +7110,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!108 &882475063 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 5199659380161638104, guid: ae64c9681919b3d438ee00441773c7fd, type: 3}
+  m_PrefabInstance: {fileID: 882475058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &899540490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13130,6 +13151,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3155997500436769022, guid: 27b319322161d9b478808a4180377486, type: 3}
   m_PrefabInstance: {fileID: 1543634487}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1548374930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5683770716648416202, guid: bdeb57ff900e167419635eef4854627d, type: 3}
+  m_PrefabInstance: {fileID: 1554664591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1548374935
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548374930}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9138372118771874548, guid: 5d9ec12203f3d1940acfb05dfc342016, type: 3}
 --- !u!1001 &1553968226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13332,7 +13380,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3116740303093524234, guid: bdeb57ff900e167419635eef4854627d, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4970622610132959593, guid: bdeb57ff900e167419635eef4854627d, type: 3}
     - {fileID: 7172472747966670440, guid: bdeb57ff900e167419635eef4854627d, type: 3}
@@ -13349,7 +13398,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3426438393454332279, guid: bdeb57ff900e167419635eef4854627d, type: 3}
       insertIndex: 4
       addedObject: {fileID: 1306772981}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5683770716648416202, guid: bdeb57ff900e167419635eef4854627d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1548374935}
   m_SourcePrefab: {fileID: 100100000, guid: bdeb57ff900e167419635eef4854627d, type: 3}
 --- !u!4 &1554664592 stripped
 Transform:
