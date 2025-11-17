@@ -29,7 +29,7 @@ public abstract class IInteractable : MonoBehaviour
     protected virtual void Start()
     {
         m_OutlineScript = GetComponent<Outline>();
-        m_OutlineScript.enabled = false;
+            m_OutlineScript.enabled = false;
 
         if (m_InteractableScript == null)
             Logger.Log("Interactable_Script not found in child of gameobject!",
@@ -43,7 +43,7 @@ public abstract class IInteractable : MonoBehaviour
                 MethodBase.GetCurrentMethod());
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         // Progress Radial
         if (m_InProgress && m_InteractableScript != null)
@@ -60,7 +60,7 @@ public abstract class IInteractable : MonoBehaviour
 
     public virtual void HandleOutline(bool state)
     {
-        m_OutlineScript.enabled = state;
+            m_OutlineScript.enabled = state;
     }
 
     public virtual void HandleInteractionStarted(float inputHoldTime)
