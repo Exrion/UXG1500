@@ -1,11 +1,32 @@
 VisualElement {
 }
 
+.Identifier_Text {
+}
+
+.Identifier_Fill {
+}
+
+.Identifier_TextContent {
+}
+
+.Identifier_TextMain {
+}
+
+.Identifier_TextReadability {
+}
+
+.Identifier_TextComfort {
+}
+
+.Identifier_TextColours {
+}
+
 .Small1_Light {
     -unity-font-definition: url("project://database/Assets/lib/fonts/CuteNotebookPersonalUse-7OAEV.ttf?fileID=12800000&guid=88c4448307202d44a9da1ae6cec6e927&type=3#CuteNotebookPersonalUse-7OAEV");
     font-size: 16px;
     color: rgb(46, 46, 46);
-    transition-duration: 2s;
+    transition-duration: 1s;
     transition-delay: 0.1s;
     transition-property: color;
     transition-timing-function: ease;
@@ -23,7 +44,7 @@ VisualElement {
     color: rgba(0, 0, 0, 0);
     font-size: 48px;
     -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-SemiBold.ttf?fileID=12800000&guid=18941a68aa1a4014fbcb62be64436692&type=3#Geist-SemiBold");
-    transition-duration: 2s;
+    transition-duration: 0.5s;
     transition-delay: 0.1s;
     transition-property: color;
     transition-timing-function: ease;
@@ -41,7 +62,25 @@ VisualElement {
     color: rgba(0, 0, 0, 0);
     font-size: 96px;
     -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/otf/Geist-Bold.otf?fileID=12800000&guid=687332127aedd234192bc3e7bd32c3df&type=3#Geist-Bold");
-    transition-duration: 2s;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-property: color;
+    transition-timing-function: ease;
+}
+
+.Title3_Dark {
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 5px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0);
+    font-size: 32px;
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-SemiBold.ttf?fileID=12800000&guid=18941a68aa1a4014fbcb62be64436692&type=3#Geist-SemiBold");
+    transition-duration: 0.5s;
     transition-delay: 0.1s;
     transition-property: color;
     transition-timing-function: ease;
@@ -59,7 +98,7 @@ VisualElement {
     color: rgba(255, 255, 255, 0);
     font-size: 48px;
     -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-SemiBold.ttf?fileID=12800000&guid=18941a68aa1a4014fbcb62be64436692&type=3#Geist-SemiBold");
-    transition-duration: 2s;
+    transition-duration: 0.5s;
     transition-delay: 0.1s;
     transition-property: color;
     transition-timing-function: ease;
@@ -77,7 +116,7 @@ VisualElement {
     color: rgba(255, 255, 255, 0);
     font-size: 96px;
     -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/otf/Geist-Bold.otf?fileID=12800000&guid=687332127aedd234192bc3e7bd32c3df&type=3#Geist-Bold");
-    transition-duration: 2s;
+    transition-duration: 0.5s;
     transition-delay: 0.1s;
     transition-property: color;
     transition-timing-function: ease;
@@ -89,10 +128,14 @@ VisualElement {
     height: 100%;
     position: absolute;
     background-color: rgb(255, 255, 255);
-    transition-duration: 2s;
-    transition-delay: 0.1s;
-    transition-property: background-color;
-    transition-timing-function: ease;
+    transition-duration: 2s, 3s;
+    transition-delay: 0.1s, 0.1s;
+    transition-property: background-color, -unity-background-image-tint-color;
+    transition-timing-function: ease, ease;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0);
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
 .FlexRow {
@@ -126,4 +169,239 @@ VisualElement {
 
 .BackgroundSlate {
     background-color: rgb(30, 30, 30);
+}
+
+.BackgroundSlateGlow {
+    background-image: url("project://database/Assets/src/core/art/Mesa%20de%20trabajo%201.png?fileID=2800000&guid=6d9379f22c9828c46b8f6f89028efe05&type=3#Mesa de trabajo 1");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.78);
+    background-color: rgb(0, 0, 0);
+}
+
+.BackgroundOffWhiteGlow {
+    background-image: url("project://database/Assets/src/core/art/Mesa%20de%20trabajo%202.png?fileID=2800000&guid=ee6d89529b8a8f04f9a6929e6d6f2ed4&type=3#Mesa de trabajo 2");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.78);
+    background-color: rgb(242, 242, 242);
+}
+
+.OpacityNone {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-delay: 0.1s;
+}
+
+.OpacityFull {
+    opacity: 1;
+}
+
+.ModeToggle-Dark {
+    flex-grow: 1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 95px;
+    height: 50px;
+    background-color: rgb(30, 30, 30);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+}
+
+.ModeToggle-Dark:hover {
+    background-color: rgb(44, 44, 44);
+}
+
+.ModeToggleSliderBase-Dark {
+    flex-grow: 0;
+    width: 90%;
+    height: 80%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(27, 27, 27);
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: row;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-property: background-color;
+    transition-timing-function: ease;
+}
+
+.ModeToggleSliderBase-Dark:hover {
+    background-color: rgb(41, 41, 41);
+}
+
+.ModeToggleSlider-Dark {
+    flex-grow: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(62, 62, 62);
+    width: 45%;
+    height: 100%;
+    background-image: url("project://database/Assets/src/core/art/dark.png?fileID=2800000&guid=ce25950bf89012441ad38e2d20cc07af&type=3#dark");
+    background-size: 75% 75%;
+    -unity-background-image-tint-color: rgb(204, 204, 204);
+    transition-duration: 0.5s, 0.5s, 0.5s;
+    transition-delay: 0s, 0s, 0.1s;
+    transition-property: background-color, -unity-background-image-tint-color, margin-left;
+    transition-timing-function: ease, ease, ease-in-out-cubic;
+}
+
+.ModeToggle-Light {
+    background-color: rgb(226, 226, 226);
+}
+
+.ModeToggle-Light:hover {
+    background-color: rgb(212, 212, 212);
+}
+
+.ModeToggleSliderBase-Light {
+    background-color: rgb(206, 206, 206);
+}
+
+.ModeToggleSliderBase-Light:hover {
+    background-color: rgb(192, 192, 192);
+}
+
+.ModeToggleSlider-Light {
+    background-image: url("project://database/Assets/src/core/art/light.png?fileID=2800000&guid=1144fb21807062047ab118b1d582a217&type=3#light");
+    background-color: rgb(242, 242, 242);
+    margin-left: 55%;
+}
+
+.ButtonQuitBase-Dark {
+    flex-grow: 0;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 90%;
+}
+
+.ButtonInfoBase-Dark {
+    flex-grow: 0;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+    height: 80%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    opacity: 1;
+    margin-right: 2%;
+}
+
+.ButtonQuit-Dark {
+    background-image: url("project://database/Assets/src/core/art/quit-dark.png?fileID=2800000&guid=4c3b0889fc383ff42880da8fb303a91f&type=3#quit-dark");
+    width: 50px;
+    height: 50px;
+    background-size: 75% 75%;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-property: -unity-background-image-tint-color;
+}
+
+.ButtonQuit-Light {
+    background-image: url("project://database/Assets/src/core/art/quit-light.png?fileID=2800000&guid=3aca34b3367bfa341ba61c944ecfd641&type=3#quit-light");
+}
+
+.ButtonBack-Dark {
+    flex-grow: 0;
+    background-image: url("project://database/Assets/src/core/art/back-dark.png?fileID=2800000&guid=099d65df4b0c15844878dc8b071b3cbe&type=3#back-dark");
+    width: 25px;
+    background-size: 100% 100%;
+    height: 25px;
+    transition-property: background-image;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+}
+
+.ButtonBack-Light {
+    background-image: url("project://database/Assets/src/core/art/back-light.png?fileID=2800000&guid=a5085b39b81b69e49b4e0255ae4e1d98&type=3#back-light");
+}
+
+.TextDarkMode {
+    color: rgb(242, 242, 242);
+    transition-property: color;
+    transition-duration: 1.5s;
+    transition-delay: 0.1s;
+}
+
+.TextLightMode {
+    color: rgb(46, 46, 46);
+}
+
+.FillDarkMode {
+    background-color: rgba(41, 41, 41, 0.71);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+}
+
+.FillDarkMode:hover {
+    background-color: rgb(55, 55, 55);
+}
+
+.FillLightMode {
+    background-color: rgb(226, 226, 226);
+}
+
+.FillLightMode:hover {
+    background-color: rgb(212, 212, 212);
+}
+
+.Title {
+    font-size: 64px;
+    width: 700px;
+    white-space: normal;
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-Bold.ttf?fileID=12800000&guid=b530945967a974a4b9d3cc2a2e911c55&type=3#Geist-Bold");
+    transition-duration: 1.5s;
+    transition-delay: 0.1s;
+}
+
+.Subtitle {
+    font-size: 36px;
+    width: 700px;
+    white-space: normal;
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-Bold.ttf?fileID=12800000&guid=b530945967a974a4b9d3cc2a2e911c55&type=3#Geist-Bold");
+    transition-duration: 1.5s;
+    transition-delay: 0.1s;
+}
+
+.Label {
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-Regular.ttf?fileID=12800000&guid=5ee4fefaa23f79644aab60a8912937b9&type=3#Geist-Regular");
+    font-size: 24px;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.ParagraphSpacing {
+    margin-top: 8px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1200px;
+    white-space: pre-wrap;
 }

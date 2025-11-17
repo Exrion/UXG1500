@@ -30,4 +30,11 @@ class Interactable_UITKDocument : IInteractable
         else
             m_UIDocument.rootVisualElement.style.display = DisplayStyle.Flex;
     }
+
+    public void OnQuitUI()
+    {
+        ToggleFPSController();
+        ToggleHUD();
+        m_UIDocument.rootVisualElement.style.display = DisplayStyle.None;
+    }
 }

@@ -1,0 +1,38 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/S3_Laptop_Style.uss?fileID=7433441132597879392&amp;guid=14533ccee387c214795fe1cdcb535b0d&amp;type=3#S3_Laptop_Style" />
+    <ui:VisualElement name="Background" class="Background BackgroundSlate BackgroundSlateGlow" style="padding-top: 32px; padding-right: 32px; padding-bottom: 32px; padding-left: 32px;" />
+    <ui:VisualElement name="Root" style="flex-grow: 1; width: 100%; height: 591px; background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement name="Container" style="flex-grow: 1; padding-right: 48px; padding-left: 48px; padding-top: 24px; padding-bottom: 24px; width: 100%; height: 100%; align-items: flex-start; justify-content: flex-start;">
+            <ui:VisualElement name="Content" style="flex-grow: 1; width: 100%;">
+                <ui:Label text="What makes an effective Dark Mode?" class="Title TextDarkMode Identifier_Text Identifier_TextContent Identifier_TextMain" />
+                <ui:Label text="In this module, we will dive into the Aesthetics and Accessibility Design Choices that makes Dark Mode what it is." class="Identifier_Text TextDarkMode Subtitle Identifier_TextContent Identifier_TextMain" style="-unity-font-definition: url(&quot;project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-Regular.ttf?fileID=12800000&amp;guid=5ee4fefaa23f79644aab60a8912937b9&amp;type=3#Geist-Regular&quot;); font-size: 32px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 0; width: 100%; justify-content: center; align-items: flex-end; flex-direction: row;">
+                <ui:VisualElement name="Items" style="flex-grow: 1; width: 20%; height: 75px; justify-content: flex-start; flex-direction: row; align-self: auto; align-items: flex-end;">
+                    <ui:VisualElement name="Back" class="Identifier_Fill ButtonInfoBase-Dark FillDarkMode" style="width: 6%; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; justify-content: center; flex-grow: 0;">
+                        <ui:VisualElement name="BackIcon" class="ButtonBack-Dark" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Readability" class="Identifier_Fill ButtonInfoBase-Dark FillDarkMode">
+                        <ui:Label text="Readability" class="Identifier_Text TextDarkMode Label" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Comfort" class="ButtonInfoBase-Dark Identifier_Fill FillDarkMode">
+                        <ui:Label text="Comfort" class="Identifier_Text TextDarkMode Label" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Colours" class="ButtonInfoBase-Dark Identifier_Fill FillDarkMode">
+                        <ui:Label text="Colours" class="Identifier_Text TextDarkMode Label" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Quit" class="ButtonQuitBase-Dark FillDarkMode Identifier_Fill">
+                    <ui:VisualElement name="QuitIcon" class="ButtonQuit-Dark" style="flex-grow: 1; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; flex-shrink: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="LightDarkToggleParent" style="flex-grow: 0; position: absolute; top: 27px; left: 1064px;">
+            <ui:VisualElement name="SwitchBase" class="ModeToggle-Dark">
+                <ui:VisualElement name="SliderBase" class="ModeToggleSliderBase-Dark">
+                    <ui:VisualElement name="Slider" class="ModeToggleSlider-Dark" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
