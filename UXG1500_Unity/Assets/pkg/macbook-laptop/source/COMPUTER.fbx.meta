@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: 2d5b087eb12b51c479f6ce7482d8f42a
-AssetOrigin:
-  serializedVersion: 1
-  productId: 295074
-  packageName: Bedroom / Interior - Low Poly assets
-  packageVersion: 1.1.5
-  assetPath: Assets/Fries and Seagull/Interior 01/Models/Remote.fbx
-  uploadId: 721210
+guid: 36f2fbd0ff41ac045bbbc5c99218a944
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -86,7 +79,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
