@@ -17,6 +17,7 @@ public class S3Laptopetails_Script : MonoBehaviour
 
     public UIDocument m_PreviousUIDDocument;
     public IInteractable m_Interactable;
+    public FirstPersonController m_PlayerController;
 
     UIDocument m_UIDocument;
     VisualElement m_RootVisualElement;
@@ -45,7 +46,7 @@ public class S3Laptopetails_Script : MonoBehaviour
     {
         m_UIDocument = GetComponent<UIDocument>();
         m_RootVisualElement = m_UIDocument.rootVisualElement;
-        //m_RootVisualElement.style.display = DisplayStyle.None;
+        m_RootVisualElement.style.display = DisplayStyle.None;
 
         m_LightDarkToggle = m_RootVisualElement.Q("LightDarkToggleParent");
         m_LightDarkToggle.RegisterCallback<ClickEvent>(OnToggleLightDark);
@@ -72,6 +73,9 @@ public class S3Laptopetails_Script : MonoBehaviour
 
     void Update()
     {
+        if (m_RootVisualElement.style.display == DisplayStyle.Flex)
+            OnEnter();
+
         if (!m_OpacityChanged) 
             StartCoroutine(EnableOpacity());
 
@@ -104,6 +108,7 @@ public class S3Laptopetails_Script : MonoBehaviour
     {
         m_PreviousUIDDocument.rootVisualElement.style.display = DisplayStyle.None;
         m_RootVisualElement.style.display = DisplayStyle.Flex;
+        OnEnter();
     }
 
     void GenerateContent()
@@ -298,10 +303,18 @@ public class S3Laptopetails_Script : MonoBehaviour
         currentPage = page;
     }
 
+    void OnEnter()
+    {
+        m_PlayerController.lockCursor = false;
+    }
+
     void OnQuit(ClickEvent evt)
     {
+        m_PlayerController.lockCursor = true;
+        m_RootVisualElement.style.display = DisplayStyle.None;
+
         if (m_Interactable)
-            ((Interactable_UITKDocument)m_Interactable).OnQuitUI();
+            ((Interactable_UITKDocument)m_Interactable).OnQuitUI(m_UIDocument);
     }
 
     void OnToggleLightDark(ClickEvent evt)

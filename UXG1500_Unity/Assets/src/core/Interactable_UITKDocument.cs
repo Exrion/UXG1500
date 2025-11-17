@@ -31,10 +31,12 @@ class Interactable_UITKDocument : IInteractable
             m_UIDocument.rootVisualElement.style.display = DisplayStyle.Flex;
     }
 
-    public void OnQuitUI()
+    public void OnQuitUI(UIDocument newDocument = null)
     {
         ToggleFPSController();
         ToggleHUD();
         m_UIDocument.rootVisualElement.style.display = DisplayStyle.None;
+        if (newDocument != null)
+            m_UIDocument = newDocument;
     }
 }

@@ -129,7 +129,10 @@ public abstract class IInteractable : MonoBehaviour
 
     protected void ToggleHUD()
     {
-        m_HUDDocument.rootVisualElement.style.display = DisplayStyle.None;
+        if (m_HUDDocument.rootVisualElement.style.display == DisplayStyle.None)
+            m_HUDDocument.rootVisualElement.style.display = DisplayStyle.Flex;
+        else
+            m_HUDDocument.rootVisualElement.style.display = DisplayStyle.None;
     }
 
     protected void ToggleFPSController()

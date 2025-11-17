@@ -47,6 +47,7 @@ public class S3Laptop_Script : MonoBehaviour
                 break;
             default:
                 m_NextDocumentScript.SwitchDocuments();
+                stage = 1;
                 break;
         }
     }
