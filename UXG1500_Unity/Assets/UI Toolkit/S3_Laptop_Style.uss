@@ -393,8 +393,7 @@ VisualElement {
 
 .Label {
     -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-Regular.ttf?fileID=12800000&guid=5ee4fefaa23f79644aab60a8912937b9&type=3#Geist-Regular");
-    font-size: 24px;
-    max-width: 800px;
+    font-size: 22px;
     flex-wrap: wrap;
 }
 
@@ -402,6 +401,6 @@ VisualElement {
     margin-top: 8px;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 1200px;
+    width: 90%;
     white-space: pre-wrap;
 }

@@ -22,8 +22,8 @@
                         <ui:Label text="Colours" class="Identifier_Text TextDarkMode Label" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:VisualElement name="Quit" class="ButtonQuitBase-Dark FillDarkMode Identifier_Fill">
-                    <ui:VisualElement name="QuitIcon" class="ButtonQuit-Dark" style="flex-grow: 1; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; flex-shrink: 1;" />
+                <ui:VisualElement name="Quit" class="ButtonQuitBase-Dark FillDarkMode Identifier_Fill" style="height: 80%;">
+                    <ui:VisualElement name="QuitIcon" class="ButtonQuit-Dark" style="flex-grow: 1; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; flex-shrink: 1; background-size: 70% 75%;" />
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>

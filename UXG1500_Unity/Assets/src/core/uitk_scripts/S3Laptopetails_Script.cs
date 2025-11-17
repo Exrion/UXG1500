@@ -139,7 +139,7 @@ public class S3Laptopetails_Script : MonoBehaviour
         element.AddToClassList("Identifier_TextReadability");
         content.Add(element);
 
-        element = new Label("Stark differences in light and dark colours lead to visual fatigue and visual artifacts such as halation.");
+        element = new Label("Stark differences in light and dark colours lead to visual fatigue and visual artifacts such as halation. Especially for users with astigmatism.");
         element.AddToClassList("Label");
         element.AddToClassList("TextDarkMode");
         element.AddToClassList("Identifier_Text");
@@ -167,9 +167,99 @@ public class S3Laptopetails_Script : MonoBehaviour
         element.AddToClassList("Identifier_TextComfort");
         content.Add(element);
 
+        element = new Label("Similar to readability, comfort shares many of the same aspects.");
+        element.AddToClassList("Label");
+        element.AddToClassList("TextDarkMode");
+        element.AddToClassList("Identifier_Text");
+        element.AddToClassList("ParagraphSpacing");
+        element.AddToClassList("Identifier_TextContent");
+        element.AddToClassList("Identifier_TextComfort");
+        content.Add(element);
+
+        element = new Label("In a study conducted in 2025 (Sengsoon & Intaruk, 2025), participants were found to suffer from visual fatigue by a greater factor when reading in Light Mode than Dark Mode.");
+        element.AddToClassList("Label");
+        element.AddToClassList("TextDarkMode");
+        element.AddToClassList("Identifier_Text");
+        element.AddToClassList("ParagraphSpacing");
+        element.AddToClassList("Identifier_TextContent");
+        element.AddToClassList("Identifier_TextComfort");
+        content.Add(element);
+
+        element = new Label("This however, came with caveats. Ambient lighting conditions still played a crucial role in determining visual fatigue, dry eyes and other factors.");
+        element.AddToClassList("Label");
+        element.AddToClassList("TextDarkMode");
+        element.AddToClassList("Identifier_Text");
+        element.AddToClassList("ParagraphSpacing");
+        element.AddToClassList("Identifier_TextContent");
+        element.AddToClassList("Identifier_TextComfort");
+        content.Add(element);
+
+        element = new Label("Dark Mode doesn't simply solve visual fatigue simply by adhering to the rules and principles discussed here. The user has a part to play as well by ensuring they use their devices in places with suffecient ambient lighting.");
+        element.AddToClassList("Label");
+        element.AddToClassList("TextDarkMode");
+        element.AddToClassList("Identifier_Text");
+        element.AddToClassList("ParagraphSpacing");
+        element.AddToClassList("Identifier_TextContent");
+        element.AddToClassList("Identifier_TextComfort");
+        content.Add(element);
+
         // Colours
         element = new Label("Colours");
         element.AddToClassList("Title");
+        element.AddToClassList("TextDarkMode");
+        element.AddToClassList("Identifier_Text");
+        element.AddToClassList("ParagraphSpacing");
+        element.AddToClassList("Identifier_TextContent");
+        element.AddToClassList("Identifier_TextColours");
+        content.Add(element);
+
+        element = new Label("Dark Modes' most defining feature by far has been its colour scheme.");
+        element.AddToClassList("Label");
+        element.AddToClassList("TextDarkMode");
+        element.AddToClassList("Identifier_Text");
+        element.AddToClassList("ParagraphSpacing");
+        element.AddToClassList("Identifier_TextContent");
+        element.AddToClassList("Identifier_TextColours");
+        content.Add(element);
+
+        element = new Label("With a dark background and light coloured text, it has been on the rise since its initial introduction to the world.");
+        element.AddToClassList("Label");
+        element.AddToClassList("TextDarkMode");
+        element.AddToClassList("Identifier_Text");
+        element.AddToClassList("ParagraphSpacing");
+        element.AddToClassList("Identifier_TextContent");
+        element.AddToClassList("Identifier_TextColours");
+        content.Add(element);
+
+        element = new Label("Though black and white aren't the only colours we need to concern ourselves with.");
+        element.AddToClassList("Label");
+        element.AddToClassList("TextDarkMode");
+        element.AddToClassList("Identifier_Text");
+        element.AddToClassList("ParagraphSpacing");
+        element.AddToClassList("Identifier_TextContent");
+        element.AddToClassList("Identifier_TextColours");
+        content.Add(element);
+
+        element = new Label("In order to accomodate for users with colour blindness, we must also consider colours that are visually distinct from each other when viewed by users with varying colour defeciencies.");
+        element.AddToClassList("Label");
+        element.AddToClassList("TextDarkMode");
+        element.AddToClassList("Identifier_Text");
+        element.AddToClassList("ParagraphSpacing");
+        element.AddToClassList("Identifier_TextContent");
+        element.AddToClassList("Identifier_TextColours");
+        content.Add(element);
+
+        element = new Label("The importance of additional colours in Dark Mode is amplified when designing applications.");
+        element.AddToClassList("Label");
+        element.AddToClassList("TextDarkMode");
+        element.AddToClassList("Identifier_Text");
+        element.AddToClassList("ParagraphSpacing");
+        element.AddToClassList("Identifier_TextContent");
+        element.AddToClassList("Identifier_TextColours");
+        content.Add(element);
+
+        element = new Label("Elements like call to actions, colour-coded menus and reactive elements like hover effects need to be designed with accessibility in mind to create an effective Dark Mode experience.");
+        element.AddToClassList("Label");
         element.AddToClassList("TextDarkMode");
         element.AddToClassList("Identifier_Text");
         element.AddToClassList("ParagraphSpacing");
