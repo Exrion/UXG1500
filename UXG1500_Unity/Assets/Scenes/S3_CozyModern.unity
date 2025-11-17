@@ -13471,7 +13471,7 @@ PrefabInstance:
       addedObject: {fileID: 1604460566}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d08bd1a663a14e488fe845dce1a29ca, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1604460565}
+      addedObject: {fileID: 1604460570}
   m_SourcePrefab: {fileID: 100100000, guid: 0d08bd1a663a14e488fe845dce1a29ca, type: 3}
 --- !u!4 &1604460563 stripped
 Transform:
@@ -13483,27 +13483,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d08bd1a663a14e488fe845dce1a29ca, type: 3}
   m_PrefabInstance: {fileID: 1604460562}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1604460565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604460564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 213b7cfef569bac49b2efcc7218fa364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable_UITKDocument
-  m_InteractableScript: {fileID: 1846790852}
-  m_InteractableDocument: {fileID: 1846790853}
-  m_SwivelDistance: 1
-  m_SwivelEnable: 1
-  m_HUDDocument: {fileID: 1170288045}
-  m_disableHUDOnInteract: 1
-  m_FPSController: {fileID: 0}
-  m_disableFPSControllerOnInteract: 0
-  m_UIDocument: {fileID: 0}
 --- !u!114 &1604460566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13544,6 +13523,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2959467708922500008, guid: 0d08bd1a663a14e488fe845dce1a29ca, type: 3}
+--- !u!114 &1604460570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604460564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ee75025bf9e0d44b522b59b255e3e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Interactable_SceneSwitch
+  m_InteractableScript: {fileID: 1846790852}
+  m_InteractableDocument: {fileID: 1846790853}
+  m_SwivelDistance: 1
+  m_SwivelEnable: 0
+  m_HUDDocument: {fileID: 0}
+  m_disableHUDOnInteract: 0
+  m_FPSController: {fileID: 0}
+  m_disableFPSControllerOnInteract: 0
+  m_SceneIndex: 3
 --- !u!1001 &1609727591
 PrefabInstance:
   m_ObjectHideFlags: 0
