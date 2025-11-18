@@ -29,8 +29,8 @@ class Interactable_Sun : IInteractable
     [Header("Room Lights")]
     [SerializeField]
     private List<Light> m_Lights = new();
-    private float[] m_OgLightIntensity;
-    private Coroutine[] m_LightCoroutines;
+    private float[] m_OgLightIntensity = new float[0];
+    private Coroutine[] m_LightCoroutines = new Coroutine[0];
     [SerializeField]
     private float m_LightIntensityFactor;
 
@@ -40,15 +40,22 @@ class Interactable_Sun : IInteractable
     protected override void Start()
     {
         base.Start();
-        m_OgFilter = m_Sun.color;
-        m_OgTemperature = m_Sun.colorTemperature;
-        m_OgIntensity = m_Sun.intensity;
-        m_OgIndirectMultiplier = m_Sun.bounceIntensity;
 
-        m_OgLightIntensity = new float[m_Lights.Count];
-        m_LightCoroutines = new Coroutine[m_Lights.Count];
-        for (int i = 0; i < m_Lights.Count; i++)
-            m_OgLightIntensity[i] = m_Lights[i].intensity;
+        if (m_Sun != null)
+        {
+            m_OgFilter = m_Sun.color;
+            m_OgTemperature = m_Sun.colorTemperature;
+            m_OgIntensity = m_Sun.intensity;
+            m_OgIndirectMultiplier = m_Sun.bounceIntensity;
+        }
+
+        if (m_Lights.Count > 0)
+        {
+            m_OgLightIntensity = new float[m_Lights.Count];
+            m_LightCoroutines = new Coroutine[m_Lights.Count];
+            for (int i = 0; i < m_Lights.Count; i++)
+                m_OgLightIntensity[i] = m_Lights[i].intensity;
+        }
     }
 
     protected override void Update()
@@ -57,19 +64,21 @@ class Interactable_Sun : IInteractable
 
         if (m_SunSetMode)
         {
-            if (m_Coroutine == null)
+            if (m_Coroutine == null && m_Sun != null)
                 m_Coroutine = StartCoroutine(SetSunset());
-            for (int i = 0; i < m_LightCoroutines.Length; i++)
-                if (m_LightCoroutines[i] == null)
-                    m_LightCoroutines[i] = StartCoroutine(SetLightFactor(i, true));
+            if (m_Lights.Count > 0)
+                for (int i = 0; i < m_LightCoroutines.Length; i++)
+                    if (m_LightCoroutines[i] == null && m_Lights[i] != null)
+                        m_LightCoroutines[i] = StartCoroutine(SetLightFactor(i, true));
         }
         else
         {
-            if (m_Coroutine == null)
+            if (m_Coroutine == null && m_Sun != null)
                 m_Coroutine = StartCoroutine(SetDefault());
-            for (int i = 0; i < m_LightCoroutines.Length; i++)
-                if (m_LightCoroutines[i] == null)
-                    m_LightCoroutines[i] = StartCoroutine(SetLightFactor(i, false));
+            if (m_Lights.Count > 0)
+                for (int i = 0; i < m_LightCoroutines.Length; i++)
+                    if (m_LightCoroutines[i] == null && m_Lights[i] != null)
+                        m_LightCoroutines[i] = StartCoroutine(SetLightFactor(i, false));
         }
     }
 
@@ -81,14 +90,21 @@ class Interactable_Sun : IInteractable
 
     private void OnSwitch()
     {
-        StopCoroutine(m_Coroutine);
-        m_Coroutine = null;
-
-        for (int i = 0; i < m_LightCoroutines.Length; i++)
+        if (m_Coroutine != null)
         {
-            StopCoroutine(m_LightCoroutines[i]);
-            m_LightCoroutines[i] = null;
+            StopCoroutine(m_Coroutine);
+            m_Coroutine = null;
         }
+
+        if (m_Lights.Count > 0)
+            for (int i = 0; i < m_LightCoroutines.Length; i++)
+            {
+                if (m_LightCoroutines[i] != null)
+                {
+                    StopCoroutine(m_LightCoroutines[i]);
+                    m_LightCoroutines[i] = null;
+                }
+            }
     }
 
     private IEnumerator SetLightFactor(int idx, bool sunset)
