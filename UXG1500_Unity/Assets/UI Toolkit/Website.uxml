@@ -2,9 +2,6 @@
     <Style src="project://database/Assets/UI/website.uss?fileID=7433441132597879392&amp;guid=af92aa36b1db7bb48ab1966293a1f235&amp;type=3#website" />
     <ui:VisualElement name="root" class="blog-root">
         <ui:VisualElement name="browserWindow" class="browser-window">
-            <ui:VisualElement name="osTitleBar" class="os-title-bar">
-                <ui:Label name="osTitleText" text="DarkMode Blog - DigiPen ProMax Explorer" class="os-title-text" />
-            </ui:VisualElement>
             <ui:VisualElement name="browserTitleBar" class="browser-title-bar">
                 <ui:Label name="browserTitleText" text="DarkMode Blog - DigiPen ProMax Explorer" class="browser-title-text" />
                 <ui:VisualElement name="windowButtons" class="window-buttons">
