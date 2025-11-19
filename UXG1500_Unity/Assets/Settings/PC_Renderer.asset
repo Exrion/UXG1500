@@ -24,6 +24,20 @@ MonoBehaviour:
   resetOnStart: 1
   outputDepth: 1
   depthTexture: 0
+--- !u!114 &-5987916975864723816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32e72b6a3f58a24c9033e2b9275eea0, type: 3}
+  m_Name: ScreenSpaceShadows
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ScreenSpaceShadows
+  m_Active: 1
+  m_Shader: {fileID: 4800000, guid: 0f854b35a0cf61a429bd5dcfea30eddd, type: 3}
 --- !u!114 &-1888561736172529344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,7 +84,8 @@ MonoBehaviour:
   - {fileID: 7833122117494664109}
   - {fileID: -1888561736172529344}
   - {fileID: -8930700398493624992}
-  m_RendererFeatureMap: ad6b866f10d7b46c40990a631b7bcae5601559f04dc70f84
+  - {fileID: -5987916975864723816}
+  m_RendererFeatureMap: ad6b866f10d7b46c40990a631b7bcae5601559f04dc70f8498460d5d3ca5e6ac
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
