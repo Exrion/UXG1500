@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ui:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ui="UnityEngine.UIElements"
-    xmlns:uie="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
->
-    
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/S3_Projector_Styles.uss?fileID=7433441132597879392&amp;guid=baeadb7bc49816d40a42a66b0d13d511&amp;type=3#S3_Projector_Styles" />
+    <ui:VisualElement name="Root" style="flex-grow: 1; width: 100%; height: 100%; align-items: center; justify-content: center;" />
 </ui:UXML>

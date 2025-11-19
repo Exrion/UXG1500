@@ -3004,11 +3004,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5539357819512116934, guid: e07c7948eaf0a0d48a78ade3272cb232, type: 3}
---- !u!4 &381374032 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -1926941435881299544, guid: 718a9cd44a04b3949a485d65cc82682d, type: 3}
-  m_PrefabInstance: {fileID: 2049092615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &385537338 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3725649924653696408, guid: 279d112bec20f0f4a8c9536559dbaf32, type: 3}
@@ -8185,6 +8180,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2040111195}
   - {fileID: 59234051}
   - {fileID: 520610253}
   - {fileID: 1990185209}
@@ -14677,8 +14673,7 @@ MonoBehaviour:
   m_disableHUDOnInteract: 0
   m_FPSController: {fileID: 0}
   m_disableFPSControllerOnInteract: 0
-  m_SlidePaths: []
-  m_UIDocument: {fileID: 0}
+  m_ProjectorScript: {fileID: 2040111197}
 --- !u!1001 &1700406059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18022,6 +18017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2040111195}
   - component: {fileID: 2040111196}
+  - component: {fileID: 2040111197}
   m_Layer: 0
   m_Name: DocumentParent
   m_TagString: Untagged
@@ -18037,13 +18033,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040111194}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: -0.000000057369473, y: -0.0058194133, z: -0.028299876}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -0.000000042146855, y: 0.7071068, z: 0.000000042146855, w: 0.7071068}
+  m_LocalPosition: {x: -4.8999996, y: 1.7500001, z: 1.56}
+  m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 381374032}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+  m_Father: {fileID: 1057189993}
+  m_LocalEulerAnglesHint: {x: 90, y: -90, z: -90}
 --- !u!114 &2040111196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18056,7 +18052,7 @@ MonoBehaviour:
   m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
-  m_PanelSettings: {fileID: 11400000, guid: 0d500e150d9331d4091ad163919bee85, type: 2}
+  m_PanelSettings: {fileID: 11400000, guid: 107cdd0d46846294583aa0f9ed769e39, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: ed21f9251cbee214db4bbb6a060b65bd, type: 3}
   m_SortingOrder: 0
@@ -18067,6 +18063,20 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+--- !u!114 &2040111197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040111194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 992bf99001003cc439012d074d9c679d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::S3_Projector_Script
+  m_SlidePaths:
+  - Assets/UI Toolkit/S3_Projector/Slide1.uxml
 --- !u!1 &2041732125
 GameObject:
   m_ObjectHideFlags: 0
@@ -18286,10 +18296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -1926941435881299544, guid: 718a9cd44a04b3949a485d65cc82682d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2040111195}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 718a9cd44a04b3949a485d65cc82682d, type: 3}
 --- !u!4 &2050810696 stripped
