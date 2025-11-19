@@ -12,7 +12,6 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _LOCAL_VOLUMETRIC_CLOUDS
   - _OUTPUT_CLOUDS_DEPTH
   - _PERCEPTUAL_BLENDING
   - _PHYSICALLY_BASED_SUN
@@ -174,7 +173,7 @@ Material:
     - _SunSize: 0.04
     - _SunSizeConvergence: 5
     - _Surface: 0
-    - _VerticalErosionWindDisplacement: -0.83057886
+    - _VerticalErosionWindDisplacement: -6.876192
     - _VerticalShapeNoiseOffset: 0
     - _VerticalShapeWindDisplacement: 0
     - _WorkflowMode: 1
@@ -189,7 +188,7 @@ Material:
     - _SkyTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _WindDirection: {r: -0.99992746, g: -0.0120424805, b: 0, a: 0}
-    - _WindVector: {r: -9.966223, g: -0.12002674, b: 0, a: 0}
+    - _WindVector: {r: -82.50832, g: -0.99367696, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4204168956660823475
