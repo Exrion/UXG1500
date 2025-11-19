@@ -39,7 +39,7 @@ public abstract class IInteractable : MonoBehaviour
     protected virtual void Start()
     {
         m_OutlineScript = GetComponent<Outline>();
-        m_OutlineScript.enabled = false;
+            m_OutlineScript.enabled = false;
 
         m_ChildOrigin = m_OutlineScript.transform.position;
 
@@ -101,7 +101,7 @@ public abstract class IInteractable : MonoBehaviour
 
     public virtual void HandleOutline(bool state)
     {
-        m_OutlineScript.enabled = state;
+            m_OutlineScript.enabled = state;
     }
 
     public virtual void HandleInteractionStarted(float inputHoldTime)
