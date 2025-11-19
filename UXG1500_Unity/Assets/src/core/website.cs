@@ -20,6 +20,18 @@ public class Website : MonoBehaviour
         SetupClock();
         SetupHoverLinks();
         SetupTabs();
+
+        root.Q("startButton").RegisterCallback<ClickEvent>(evt =>
+        {
+            GameManager.Instance.PrepareScene(3);
+            GameManager.Instance.ArmSceneSwitch();
+        });
+
+        root.Q("windowButtons").RegisterCallback<ClickEvent>(evt =>
+        {
+            GameManager.Instance.PrepareScene(3);
+            GameManager.Instance.ArmSceneSwitch();
+        });
     }
 
     // -------------------------------------------------------

@@ -4,10 +4,10 @@
         <ui:VisualElement name="browserWindow" class="browser-window">
             <ui:VisualElement name="browserTitleBar" class="browser-title-bar">
                 <ui:Label name="browserTitleText" text="DarkMode Blog - DigiPen ProMax Explorer" class="browser-title-text" />
-                <ui:VisualElement name="windowButtons" class="window-buttons">
-                    <ui:VisualElement name="minButton" class="window-btn" />
-                    <ui:VisualElement name="maxButton" class="window-btn" />
-                    <ui:VisualElement name="closeButton" class="window-btn close" />
+                <ui:VisualElement name="windowButtons" class="window-buttons" style="background-image: url(&quot;project://database/Assets/src/core/art/s2_all.png?fileID=2800000&amp;guid=b0cdfeab258429749a35c6e0ab18ef9a&amp;type=3#s2_all&quot;); flex-grow: 0; width: 10%; height: 60%;">
+                    <ui:VisualElement name="minButton" class="window-btn" style="border-top-width: 0.5px; border-right-width: 0.5px; border-bottom-width: 0.5px; border-left-width: 0.5px; background-image: none; display: none;" />
+                    <ui:VisualElement name="maxButton" class="window-btn" style="background-image: none; -unity-background-scale-mode: scale-to-fit; border-top-width: 0.5px; border-right-width: 0.5px; border-bottom-width: 0.5px; border-left-width: 0.5px; display: none;" />
+                    <ui:VisualElement name="closeButton" class="window-btn close" style="background-image: none; -unity-background-scale-mode: stretch-to-fill; border-top-width: 0.5px; border-right-width: 0.5px; border-bottom-width: 0.5px; border-left-width: 0.5px; display: none;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="navTabs" class="nav-tabs">
@@ -31,30 +31,30 @@
                                 <ui:Label text="Welcome" class="sidebar-header-title" />
                             </ui:VisualElement>
                             <ui:VisualElement name="sidebarBody" class="sidebar-body">
-                                <ui:Label text="Aesthetics" class="sidebar-section-title" />
-                                <ui:Label text="• Why people like it" class="sidebar-link" />
-                                <ui:Label text="• Internet Sources" class="sidebar-link" />
-                                <ui:Label text="• TV, DVD &amp; Video" class="sidebar-link" />
-                                <ui:Label text="More..." class="sidebar-more-link" />
-                                <ui:Label text="Accessibility" class="sidebar-section-title" />
-                                <ui:Label text="• Digital Articles" class="sidebar-link" />
-                                <ui:Label text="• Pros &amp; Cons" class="sidebar-link" />
-                                <ui:Label text="• Debating" class="sidebar-link" />
-                                <ui:Label text="More..." class="sidebar-more-link" />
-                                <ui:Label text="Medical" class="sidebar-section-title" />
-                                <ui:Label text="• Prof Journal 1" class="sidebar-link" />
-                                <ui:Label text="• Prof Journal 2" class="sidebar-link" />
-                                <ui:Label text="• Medical News" class="sidebar-link" />
-                                <ui:Label text="More..." class="sidebar-more-link" />
-                                <ui:Label text="Emotional" class="sidebar-section-title" />
-                                <ui:Label text="• Humanity" class="sidebar-link" />
-                                <ui:Label text="• Mindset News" class="sidebar-link" />
-                                <ui:Label text="More..." class="sidebar-more-link" />
+                                <ui:Label text="&lt;u&gt;Aesthetics" name="Label" class="sidebar-section-title sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• Why people like it" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• Internet Sources" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• TV, DVD &amp; Video" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;More..." class="sidebar-more-link sidebar-label-spacing" style="margin-bottom: 10px;" />
+                                <ui:Label text="&lt;u&gt;Accessibility" class="sidebar-section-title sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• Digital Articles" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• Pros &amp; Cons" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• Debating" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;More..." class="sidebar-more-link sidebar-label-spacing" style="margin-bottom: 10px;" />
+                                <ui:Label text="&lt;u&gt;Medical" class="sidebar-section-title sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• Prof Journal 1" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• Prof Journal 2" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• Medical News" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;More..." class="sidebar-more-link sidebar-label-spacing" style="margin-bottom: 10px;" />
+                                <ui:Label text="&lt;u&gt;Emotional" class="sidebar-section-title sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• Humanity" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;• Mindset News" class="sidebar-link sidebar-label-spacing" />
+                                <ui:Label text="&lt;u&gt;More..." class="sidebar-more-link sidebar-label-spacing" />
                             </ui:VisualElement>
                         </ui:VisualElement>
                         <ui:VisualElement name="mainColumn" class="main-column">
                             <ui:VisualElement name="heroCard" class="hero-card">
-                                <ui:VisualElement name="heroImage" class="hero-image" />
+                                <ui:VisualElement name="heroImage" class="hero-image" style="background-image: url(&quot;project://database/Assets/src/core/art/s2_bg.png?fileID=2800000&amp;guid=3fb5f3accefcc7f45b6bdd05b67ea9ef&amp;type=3#s2_bg&quot;); -unity-background-scale-mode: stretch-to-fill; height: 216px;" />
                                 <ui:Label name="heroTitle" text="Evolving the Times:" class="hero-title" />
                                 <ui:Label name="heroSubtitle" text="We&apos;ve gone from CRT displays to color LCDs. Grey or black screens would consume more energy." class="hero-subtitle" />
                             </ui:VisualElement>
@@ -75,16 +75,16 @@
                                 </ui:VisualElement>
                             </ui:VisualElement>
                             <ui:VisualElement name="cardStrip" class="card-strip">
-                                <ui:VisualElement class="info-card">
+                                <ui:VisualElement class="info-card" style="border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
                                     <ui:Label text="&quot;Dark mode doesn&apos;t necessarily reduce visual fatigue.&quot;" class="card-title" />
                                     <ui:Label text="Was the conclusion found after conducting a medical study by Sengsoon &amp; Intarku. The report also highlights..." class="card-body" />
                                 </ui:VisualElement>
-                                <ui:VisualElement class="info-card">
+                                <ui:VisualElement class="info-card" style="border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
                                     <ui:Label text="Academic Journal – Immediate Effects of Light Mode and Dark Mode" class="card-title" />
                                     <ui:Label text="A study showed that several factors are involved outside of UI design. Although prolonged usage of the devices was observed to cause dry eyes due to..." class="card-body" />
                                     <ui:Label text="James Madison liked this post" class="card-footer" />
                                 </ui:VisualElement>
-                                <ui:VisualElement class="info-card">
+                                <ui:VisualElement class="info-card" style="border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; margin-top: 10px;">
                                     <ui:Label text="Overall Review:" class="card-title" />
                                     <ui:Label text="After review, it was concluded the usage of the device in light mode versus dark mode revealed significant statistical differences in CFF assessment results..." class="card-body" />
                                 </ui:VisualElement>

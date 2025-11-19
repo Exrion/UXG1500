@@ -1,39 +1,35 @@
 :root {
-    -unity-font-definition: resource("Fonts/Arial");
-    color: #000000;
+    -unity-font-definition: resource('Fonts/Arial');
+    color: rgb(0, 0, 0);
 }
 
-/* MAIN ROOT */
 .blog-root {
     flex-direction: column;
     flex-grow: 1;
-    background-color: #c0c0c0;
+    background-color: rgb(192, 192, 192);
 }
 
-/* BROWSER WINDOW AREA (above taskbar) */
 .browser-window {
     flex-direction: column;
     flex-grow: 1;
-    background-color: #d4d4d4;
+    background-color: rgb(212, 212, 212);
 }
 
-/* OS GREY TITLE BAR */
 .os-title-bar {
     height: 18px;
-    background-color: #3a3a3a;
+    background-color: rgb(58, 58, 58);
     align-items: center;
     padding-left: 6px;
 }
 
 .os-title-text {
     font-size: 11px;
-    color: #ffffff;
+    color: rgb(255, 255, 255);
 }
 
-/* BLUE XP TITLE BAR */
 .browser-title-bar {
     height: 30px;
-    background-color: #0055b7;
+    background-color: rgb(0, 85, 183);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -42,12 +38,11 @@
 }
 
 .browser-title-text {
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     -unity-font-style: bold;
     font-size: 13px;
 }
 
-/* WINDOW BUTTONS */
 .window-buttons {
     flex-direction: row;
 }
@@ -56,19 +51,18 @@
     width: 16px;
     height: 16px;
     border-width: 1px;
-    border-color: #ffffff;
-    background-color: #0a2c6a;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(10, 44, 106);
     margin-left: 3px;
 }
 
 .window-btn.close {
-    background-color: #cf2c28;
+    background-color: rgb(207, 44, 40);
 }
 
-/* NAV TABS */
 .nav-tabs {
     height: 40px;
-    background-color: #e5e5e5;
+    background-color: rgb(229, 229, 229);
     flex-direction: row;
     align-items: flex-end;
     padding-left: 10px;
@@ -78,31 +72,29 @@
     min-height: 26px;
     padding-left: 12px;
     padding-right: 12px;
-    background-color: #0055b7;
-    color: #ffffff;
+    background-color: rgb(0, 85, 183);
+    color: rgb(255, 255, 255);
     -unity-font-style: bold;
     font-size: 12px;
-
-    border-top-left-radius: 6px;
+    border-top-left-radius: 0;
     border-top-right-radius: 6px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
 
 .nav-tab-selected {
-    background-color: #003b8a;
+    background-color: rgb(0, 59, 138);
 }
 
-/* SEARCH ROW */
 .search-row {
     height: 34px;
-    background-color: #d0d0d0;
+    background-color: rgb(208, 208, 208);
     flex-direction: row;
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
     border-bottom-width: 1px;
-    border-bottom-color: #999999;
+    border-bottom-color: rgb(153, 153, 153);
 }
 
 .search-label {
@@ -125,7 +117,6 @@
     font-size: 11px;
 }
 
-/* CONTENT AREA */
 .scroll-area {
     flex-grow: 1;
     padding: 10px;
@@ -135,47 +126,44 @@
     flex-direction: column;
 }
 
-/* LAYOUT: SIDEBAR + MAIN COLUMN */
 .page-layout {
     flex-direction: row;
 }
 
-/* SIDEBAR OUTER */
 .sidebar {
     width: 220px;
     flex-direction: column;
 }
 
-/* BLUE TOP CAP */
 .sidebar-header {
     height: 40px;
-    background-color: #004f9f;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    background-color: rgb(0, 79, 159);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     justify-content: center;
     padding-left: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .sidebar-header-title {
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     -unity-font-style: bold;
     font-size: 16px;
 }
 
-/* YELLOW BODY */
 .sidebar-body {
-    background-color: #fffcc6;
+    background-color: rgb(255, 252, 198);
     padding-left: 12px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 6px;
 }
 
-/* SECTION TITLES & LINKS */
 .sidebar-section-title {
-    -unity-font-style: bold;
-    font-size: 13px;
-    color: #004f9f;
+    -unity-font-style: normal;
+    font-size: 14px;
+    color: rgb(0, 79, 159);
     margin-top: 8px;
     margin-bottom: 4px;
     text-decoration: underline;
@@ -183,37 +171,40 @@
 
 .sidebar-link {
     font-size: 12px;
-    color: #003f7f;
+    color: rgb(0, 63, 127);
     margin-left: 10px;
     margin-bottom: 2px;
+    padding-left: 6px;
 }
 
 .sidebar-more-link {
     font-size: 12px;
-    color: #003f7f;
+    color: rgb(0, 63, 127);
     margin-left: 10px;
     margin-top: 2px;
 }
 
-/* MAIN COLUMN */
 .main-column {
     flex-grow: 1;
     flex-direction: column;
     margin-left: 16px;
 }
 
-/* HERO CARD */
 .hero-card {
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     border-radius: 18px;
     padding: 12px;
     border-width: 1px;
-    border-color: #888888;
+    border-color: rgb(136, 136, 136);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .hero-image {
     height: 200px;
-    background-color: #000000;
+    background-color: rgb(0, 0, 0);
     border-radius: 14px;
     margin-bottom: 10px;
 }
@@ -221,32 +212,33 @@
 .hero-title {
     font-size: 16px;
     -unity-font-style: bold;
-    color: #003f7f;
+    color: rgb(0, 63, 127);
 }
 
 .hero-subtitle {
     font-size: 12px;
-    color: #333333;
+    color: rgb(51, 51, 51);
     margin-top: 4px;
 }
 
-/* POSTS SECTION */
 .posts-section {
     flex-direction: column;
     margin-top: 16px;
 }
 
-/* POST BOXES */
 .forum-post {
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     border-radius: 16px;
     border-width: 2px;
-    border-color: #5b92ce;
+    border-color: rgb(91, 146, 206);
     padding: 14px;
     margin-bottom: 14px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
-/* AUTHOR LINE */
 .post-author {
     flex-direction: row;
     font-size: 13px;
@@ -255,21 +247,19 @@
 }
 
 .author-name {
-    color: #c00000;
+    color: rgb(192, 0, 0);
 }
 
 .author-date {
-    color: #003f7f;
+    color: rgb(0, 63, 127);
 }
 
-/* POST BODY */
 .post-body {
     font-size: 12px;
-    color: #333333;
+    color: rgb(51, 51, 51);
     white-space: pre-wrap;
 }
 
-/* CARD STRIP */
 .card-strip {
     flex-direction: row;
     margin-top: 16px;
@@ -277,12 +267,16 @@
 
 .info-card {
     flex-grow: 1;
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     border-width: 1px;
-    border-color: #cccccc;
+    border-color: rgb(204, 204, 204);
     border-radius: 10px;
     padding: 10px;
     margin-right: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .info-card:last-child {
@@ -297,19 +291,18 @@
 
 .card-body {
     font-size: 11px;
-    color: #333333;
+    color: rgb(51, 51, 51);
 }
 
 .card-footer {
     font-size: 11px;
-    color: #777777;
+    color: rgb(119, 119, 119);
     margin-top: 6px;
 }
 
-/* TASKBAR */
 .taskbar {
     height: 30px;
-    background-color: #0055b7;
+    background-color: rgb(0, 85, 183);
     flex-direction: row;
     align-items: center;
     padding-left: 6px;
@@ -319,8 +312,8 @@
 .taskbar-start {
     width: 70px;
     height: 22px;
-    background-color: #2a7c2a;
-    color: #ffffff;
+    background-color: rgb(42, 124, 42);
+    color: rgb(255, 255, 255);
     -unity-font-style: bold;
     font-size: 12px;
 }
@@ -328,37 +321,45 @@
 .taskbar-window-label {
     flex-grow: 1;
     margin-left: 8px;
-    color: #ffffff;
+    color: rgb(255, 255, 255);
     font-size: 11px;
 }
 
 .taskbar-clock {
     font-size: 11px;
-    color: #ffffff;
+    color: rgb(255, 255, 255);
 }
 
-/* CARD STRIP */
 .card-strip {
     flex-direction: row;
-    flex-wrap: wrap;       /* ← key fix */
+    flex-wrap: wrap;
     gap: 12px;
     margin-top: 16px;
 }
 
-/* INDIVIDUAL CARDS */
 .info-card {
-    background-color: #ffffff;
+    background-color: rgb(255, 255, 255);
     border-width: 1px;
-    border-color: #cccccc;
+    border-color: rgb(204, 204, 204);
     border-radius: 10px;
     padding: 10px;
-
-    flex: 1 1 260px;       /* grow, shrink, basis */
-    min-width: 260px;      /* prevents text overflow */
+    flex: 1 1 260px;
+    min-width: 260px;
 }
 
-/* CARD TEXT FIX */
 .info-card * {
     white-space: normal;
     overflow: visible;
+}
+
+.sidebar-label-spacing {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2px;
+    margin-bottom: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: rgb(0, 73, 146);
+    -unity-font-style: normal;
 }
