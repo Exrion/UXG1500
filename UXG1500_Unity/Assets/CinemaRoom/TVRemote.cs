@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Video;
 
-public class TVRemoteControl : IInteractable
+public class Interactable_TVRemote : IInteractable
 {
     public GameObject tvRemote;
     public OpenDoor openDoor;

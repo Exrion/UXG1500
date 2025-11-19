@@ -94,23 +94,23 @@ public class S2Website : MonoBehaviour
     // -------------------------------------------------------
     // SET HERO IMAGE (MODERN UI TOOLKIT API)
     // -------------------------------------------------------
-public void SetHeroImage(Texture2D tex)
-{
-    if (heroImage == null || tex == null)
-        return;
+    public void SetHeroImage(Texture2D tex)
+    {
+        if (heroImage == null || tex == null)
+            return;
 
-    heroImage.style.backgroundImage = new StyleBackground(tex);
+        heroImage.style.backgroundImage = new StyleBackground(tex);
 
-    // background-size: cover
-    heroImage.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Cover);
+        // background-size: cover
+        heroImage.style.backgroundSize = new BackgroundSize(BackgroundSizeType.Cover);
 
-    // background-position: center;
-    heroImage.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Center);
-    heroImage.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Center);
+        // background-position: center;
+        heroImage.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Center);
+        heroImage.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Center);
 
-    // background-repeat: no-repeat
-    heroImage.style.backgroundRepeat = new BackgroundRepeat(Repeat.NoRepeat, Repeat.NoRepeat);
-}
+        // background-repeat: no-repeat
+        heroImage.style.backgroundRepeat = new BackgroundRepeat(Repeat.NoRepeat, Repeat.NoRepeat);
+    }
 
 
 }
