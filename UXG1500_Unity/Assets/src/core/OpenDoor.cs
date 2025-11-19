@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
-
-public class DoorInteraction : IInteractable
+public class OpenDoor : MonoBehaviour
 {
     public float openAngle = 90f;
     public float openSpeed = 2f;
@@ -13,31 +12,20 @@ public class DoorInteraction : IInteractable
     private Quaternion _openRotation;
     private Coroutine _currentCoroutine;
 
-    protected override void Start()
+    public void Init()
     {
-        base.Start();
         _closedRotation = transform.rotation;
         _openRotation = Quaternion.Euler(transform.eulerAngles + new Vector3(0, openAngle, 0));
-
     }
 
-    //Update is called once per frame
-
-    public override void OnInteracted()
+    public void HandleInteraction()
     {
-        Debug.Log("Interaction Performed");
-        if (_currentCoroutine != null ) 
+        if (_currentCoroutine != null)
             StopCoroutine(_currentCoroutine);
         _currentCoroutine = StartCoroutine(ToggleDoor());
     }
 
-
-    protected override void Update()
-    {
-        base.Update();
-    }
-
-    private IEnumerator ToggleDoor()
+    IEnumerator ToggleDoor()
     {
         Quaternion targetRotation = isOpen ? _closedRotation : _openRotation;
         isOpen = !isOpen;
@@ -51,4 +39,3 @@ public class DoorInteraction : IInteractable
         transform.rotation = targetRotation;
     }
 }
-    

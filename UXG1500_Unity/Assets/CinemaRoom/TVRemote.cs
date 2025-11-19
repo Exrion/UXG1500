@@ -1,26 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Video;
 
 public class TVRemoteControl : IInteractable
 {
     public GameObject tvRemote;
+    public OpenDoor openDoor;
 
     public bool tvIsOn = false;
+    public bool touchMEbABYONEMORETIME;
 
+    public UnityEvent OpenTheFuckUp;
 
     public VideoPlayer videoPlayer;
     protected override void Start()
     {
         base.Start();
+        openDoor.Init();
         TurnTvOff(); // Start with TV off
     }
 
     protected override void Update()
     {
         base.Update();
-        
+        if (videoPlayer.frameCount - 1 == (ulong)videoPlayer.frame)
+        {
+            OpenTheFuckUp?.Invoke();
+            TurnTvOff();
+            Debug.Log("Video Ended");
+        }
     }
 
     public void TurnTvOn()
