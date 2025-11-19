@@ -1,0 +1,103 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/website.uss?fileID=7433441132597879392&amp;guid=af92aa36b1db7bb48ab1966293a1f235&amp;type=3#website" />
+    <ui:VisualElement name="root" class="blog-root">
+        <ui:VisualElement name="browserWindow" class="browser-window">
+            <ui:VisualElement name="browserTitleBar" class="browser-title-bar">
+                <ui:Label name="browserTitleText" text="DarkMode Blog - DigiPen ProMax Explorer" class="browser-title-text" />
+                <ui:VisualElement name="windowButtons" class="window-buttons">
+                    <ui:VisualElement name="minButton" class="window-btn" />
+                    <ui:VisualElement name="maxButton" class="window-btn" />
+                    <ui:VisualElement name="closeButton" class="window-btn close" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="navTabs" class="nav-tabs">
+                <ui:Button text="Aesthetics" class="nav-tab-button nav-tab-selected" />
+                <ui:Button text="Accessibility" class="nav-tab-button" />
+                <ui:Button text="Medical" class="nav-tab-button" />
+                <ui:Button text="Emotional" class="nav-tab-button" />
+                <ui:Button text="Psychological" class="nav-tab-button" />
+            </ui:VisualElement>
+            <ui:VisualElement name="searchRow" class="search-row">
+                <ui:Label text="Search" class="search-label" />
+                <ui:DropdownField name="searchDropdown" class="search-dropdown" />
+                <ui:TextField name="searchInput" class="search-input" />
+                <ui:Button name="searchButton" text="Find" class="search-button" />
+            </ui:VisualElement>
+            <ui:ScrollView name="scrollArea" class="scroll-area">
+                <ui:VisualElement name="contentWrapper" class="content-wrapper">
+                    <ui:VisualElement name="pageLayout" class="page-layout">
+                        <ui:VisualElement name="sidebar" class="sidebar">
+                            <ui:VisualElement name="sidebarHeader" class="sidebar-header">
+                                <ui:Label text="Welcome" class="sidebar-header-title" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="sidebarBody" class="sidebar-body">
+                                <ui:Label text="Aesthetics" class="sidebar-section-title" />
+                                <ui:Label text="• Why people like it" class="sidebar-link" />
+                                <ui:Label text="• Internet Sources" class="sidebar-link" />
+                                <ui:Label text="• TV, DVD &amp; Video" class="sidebar-link" />
+                                <ui:Label text="More..." class="sidebar-more-link" />
+                                <ui:Label text="Accessibility" class="sidebar-section-title" />
+                                <ui:Label text="• Digital Articles" class="sidebar-link" />
+                                <ui:Label text="• Pros &amp; Cons" class="sidebar-link" />
+                                <ui:Label text="• Debating" class="sidebar-link" />
+                                <ui:Label text="More..." class="sidebar-more-link" />
+                                <ui:Label text="Medical" class="sidebar-section-title" />
+                                <ui:Label text="• Prof Journal 1" class="sidebar-link" />
+                                <ui:Label text="• Prof Journal 2" class="sidebar-link" />
+                                <ui:Label text="• Medical News" class="sidebar-link" />
+                                <ui:Label text="More..." class="sidebar-more-link" />
+                                <ui:Label text="Emotional" class="sidebar-section-title" />
+                                <ui:Label text="• Humanity" class="sidebar-link" />
+                                <ui:Label text="• Mindset News" class="sidebar-link" />
+                                <ui:Label text="More..." class="sidebar-more-link" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="mainColumn" class="main-column">
+                            <ui:VisualElement name="heroCard" class="hero-card">
+                                <ui:VisualElement name="heroImage" class="hero-image" />
+                                <ui:Label name="heroTitle" text="Evolving the Times:" class="hero-title" />
+                                <ui:Label name="heroSubtitle" text="We&apos;ve gone from CRT displays to color LCDs. Grey or black screens would consume more energy." class="hero-subtitle" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="postsSection" class="posts-section">
+                                <ui:VisualElement name="post1" class="forum-post">
+                                    <ui:Label class="post-author">
+                                        <ui:Label text="D@rkmodelov3r " class="author-name" />
+                                        <ui:Label text="06/07/2002(Fri):" class="author-date" />
+                                    </ui:Label>
+                                    <ui:Label text="#BRINGDARKMODEBACK Guys we need dark mode back. I can&apos;t take the bright screen anymore.&#10;&#10;If I wanted white I would just use paper. Because literally dark mode has so many benefits like:&#10;&#10;1. It reduces eye strain, so much easier on the eyes #love&#10;2. It uses LESS battery like come on. White pixels takes more power, what happened to saving the earth?&#10;3. It can help improve focus! Like so many hackers in the movies use them so it&apos;s fool-proof.&#10;4. Dark mode is sooo much better at night and I like working at night #batmanvibes." class="post-body" />
+                                </ui:VisualElement>
+                                <ui:VisualElement name="post2" class="forum-post">
+                                    <ui:Label class="post-author">
+                                        <ui:Label text="D@rkmodeHATEr " class="author-name" />
+                                        <ui:Label text="06/07/2002(Fri):" class="author-date" />
+                                    </ui:Label>
+                                    <ui:Label text="Ignore the dude above he&apos;s crazy, there is a reason we moved on from those black screens in the 80s.&#10;&#10;Plus there&apos;s also consequences to dark mode, unlike what that dude said, dark mode isn&apos;t that great:&#10;&#10;1. It actually can increase eye strain, if we had dark mode forever I&apos;d be stuck glaring at my screen.&#10;2. Dark mode ACTUALLY does not increase the battery life for devices that do not make use of OLED screens.&#10;3. The mode isn&apos;t even that great, isn&apos;t even that accessible! For those with eye conditions or visual impairments, the text isn&apos;t as readable for those with myopia or astigmatism either." class="post-body" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                            <ui:VisualElement name="cardStrip" class="card-strip">
+                                <ui:VisualElement class="info-card">
+                                    <ui:Label text="&quot;Dark mode doesn&apos;t necessarily reduce visual fatigue.&quot;" class="card-title" />
+                                    <ui:Label text="Was the conclusion found after conducting a medical study by Sengsoon &amp; Intarku. The report also highlights..." class="card-body" />
+                                </ui:VisualElement>
+                                <ui:VisualElement class="info-card">
+                                    <ui:Label text="Academic Journal – Immediate Effects of Light Mode and Dark Mode" class="card-title" />
+                                    <ui:Label text="A study showed that several factors are involved outside of UI design. Although prolonged usage of the devices was observed to cause dry eyes due to..." class="card-body" />
+                                    <ui:Label text="James Madison liked this post" class="card-footer" />
+                                </ui:VisualElement>
+                                <ui:VisualElement class="info-card">
+                                    <ui:Label text="Overall Review:" class="card-title" />
+                                    <ui:Label text="After review, it was concluded the usage of the device in light mode versus dark mode revealed significant statistical differences in CFF assessment results..." class="card-body" />
+                                </ui:VisualElement>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:ScrollView>
+        </ui:VisualElement>
+        <ui:VisualElement name="taskbar" class="taskbar">
+            <ui:Button name="startButton" text="Start" class="taskbar-start" />
+            <ui:Label name="taskbarWindowLabel" text="DarkMode Blog - DigiPen ProMax Explorer" class="taskbar-window-label" />
+            <ui:Label name="taskbarClock" text="19:45" class="taskbar-clock" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
