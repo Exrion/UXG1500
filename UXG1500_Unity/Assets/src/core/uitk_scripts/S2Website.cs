@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Website : MonoBehaviour
+public class S2Website : MonoBehaviour
 {
     private VisualElement root;
     private VisualElement heroImage;
@@ -10,7 +10,9 @@ public class Website : MonoBehaviour
     private Color hoverBlue = new Color(0.20f, 0.40f, 1f, 1f);
     private Color normalLinkColor = new Color(0f, 0.2f, 0.55f, 1f);
 
-    void OnEnable()
+    VisualElement start, quit;
+
+    private void OnEnable()
     {
         root = GetComponent<UIDocument>().rootVisualElement;
 
@@ -21,17 +23,15 @@ public class Website : MonoBehaviour
         SetupHoverLinks();
         SetupTabs();
 
-        root.Q("startButton").RegisterCallback<ClickEvent>(evt =>
-        {
-            GameManager.Instance.PrepareScene(3);
-            GameManager.Instance.ArmSceneSwitch();
-        });
+        root.style.display = DisplayStyle.None;
 
-        root.Q("windowButtons").RegisterCallback<ClickEvent>(evt =>
-        {
-            GameManager.Instance.PrepareScene(3);
-            GameManager.Instance.ArmSceneSwitch();
-        });
+        root.RegisterCallback<ClickEvent>(OnQuit);
+    }
+
+    void OnQuit(ClickEvent evt)
+    {
+        GameManager.Instance.PrepareScene(2);
+        GameManager.Instance.ArmSceneSwitch();
     }
 
     // -------------------------------------------------------
