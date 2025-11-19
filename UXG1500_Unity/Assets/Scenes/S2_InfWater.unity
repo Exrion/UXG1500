@@ -1622,8 +1622,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactable_UITKDocument
   m_InteractableScript: {fileID: 1120528307}
   m_InteractableDocument: {fileID: 1120528308}
-  m_SwivelDistance: 1
-  m_SwivelEnable: 0
+  m_SwivelDistance: 0.5
+  m_SwivelEnable: 1
   m_HUDDocument: {fileID: 1335867078}
   m_disableHUDOnInteract: 1
   m_FPSController: {fileID: 1335867077}
