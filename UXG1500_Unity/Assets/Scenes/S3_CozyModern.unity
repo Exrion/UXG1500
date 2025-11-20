@@ -18019,7 +18019,7 @@ GameObject:
   - component: {fileID: 2040111196}
   - component: {fileID: 2040111197}
   m_Layer: 0
-  m_Name: DocumentParent
+  m_Name: ProjectorUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18034,7 +18034,7 @@ Transform:
   m_GameObject: {fileID: 2040111194}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000042146855, y: 0.7071068, z: 0.000000042146855, w: 0.7071068}
-  m_LocalPosition: {x: -4.8999996, y: 1.7500001, z: 1.56}
+  m_LocalPosition: {x: -4.919, y: 1.7500001, z: 1.56}
   m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -18075,8 +18075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992bf99001003cc439012d074d9c679d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::S3_Projector_Script
-  m_SlidePaths:
-  - Assets/UI Toolkit/S3_Projector/Slide1.uxml
+  m_SlideVisualTreeAssets:
+  - {fileID: 9197481963319205126, guid: 76740c8cbd71d9f4e8fc60fcb5adebc5, type: 3}
 --- !u!1 &2041732125
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class S3_Projector_Script : MonoBehaviour
 {
     [SerializeField]
-    List<string> m_SlidePaths = new();
+    List<VisualTreeAsset> m_SlideVisualTreeAssets = new();
     TemplateContainer[] m_Slides;
     int m_SlideCount = -1;
 
@@ -20,37 +21,34 @@ public class S3_Projector_Script : MonoBehaviour
         m_RootVisualElement = m_UIDocument.rootVisualElement;
         m_RootContainer = m_RootVisualElement.Q("Root");
 
-        //InitSlides();
-        //GenerateSlides();
-        //UpdateSlides();
+        InitSlides();
+        GenerateSlides();
+        UpdateSlides();
     }
 
     void AdvanceSlides() => m_SlideCount = m_SlideCount >= m_Slides.Length - 1 ? -1 : m_SlideCount + 1;
-    void InitSlides() => m_Slides = new TemplateContainer[m_SlidePaths.Count > 0 ? m_SlidePaths.Count : 0];
+    void InitSlides() => m_Slides = new TemplateContainer[m_SlideVisualTreeAssets.Count > 0 ? m_SlideVisualTreeAssets.Count : 0];
 
     public void HandleInteracted()
     {
-        //AdvanceSlides();
-        Debug.Log(m_SlideCount);
-        //UpdateSlides();
+        AdvanceSlides();
+        UpdateSlides();
     }
 
     void GenerateSlides()
     {
-        for (int i = 0; i < m_SlidePaths.Count; i++)
+        for (int i = 0; i < m_SlideVisualTreeAssets.Count; i++)
         {
-            if (CreateSlide(m_SlidePaths[i], out TemplateContainer slide))
+            if (CreateSlide(m_SlideVisualTreeAssets[i], out TemplateContainer slide))
                 m_Slides[i] = slide;
         }
     }
 
-    bool CreateSlide(string path, out TemplateContainer slide)
+    bool CreateSlide(VisualTreeAsset asset, out TemplateContainer slide)
     {
-        slide = null;
-        VisualTreeAsset va = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(path);
-        if (va != null)
+        slide = asset.CloneTree();
+        if (slide != null)
         {
-            slide = va.CloneTree();
             slide.style.width = Length.Percent(100);
             slide.style.height = Length.Percent(100);
             return true;
