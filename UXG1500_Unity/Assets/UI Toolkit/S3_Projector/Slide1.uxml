@@ -1,6 +1,12 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/S3_Projector_Styles.uss?fileID=7433441132597879392&amp;guid=baeadb7bc49816d40a42a66b0d13d511&amp;type=3#S3_Projector_Styles" />
-    <ui:VisualElement name="Container" class="Container-White">
-        <ui:Label text="TEST" />
+    <ui:VisualElement name="Container" class="Container-White Container transition-base identifier-dark-bg">
+        <ui:Label text="Ambient Lighting" class="heading1 transition-base identifier-dark-header" />
+        <ui:Label text="It&apos;s not just about the colours and contrast." class="heading2 transition-base identifier-dark-text" />
+        <ui:Label text="In a study conducted in 2019 (Kim et al., 2019), researchers studied the benefits of dark mode graphics in regard to visual acuity, fatigue and usability. This study consisted of ten male and nine female participants with either normal vision or corrected-to-normal vision (some through contact lenses, some through glasses)." class="body transition-base identifier-dark-text" />
+        <ui:Label text="The participants were required to read aloud four passages from Pearson Test of English Read Aloud Practise Questions. Participants were then shown the passages on three different backgrounds. A uniform grey background, one with randomly generated grey-scale pixels, and one with a mixture of randomly generated RGB pixels." class="body transition-base identifier-dark-text" />
+        <ui:VisualElement class="image-container transition-base" style="transition-delay: 0.1s;">
+            <ui:VisualElement class="image identifier-dark-image transition-base" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -1,9 +1,91 @@
 :root {
 }
 
+.identifier-dark-header {
+}
+
+.identifier-dark-text {
+}
+
+.identifier-dark-bg {
+}
+
+.identifier-dark-image {
+}
+
+.transition-base {
+    transition-duration: 0.3s;
+}
+
+.Container {
+    padding-top: 16px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+}
+
 .Container-White {
     flex-grow: 1;
     background-color: rgb(224, 224, 224);
     width: 100%;
     height: 100%;
+}
+
+.heading1 {
+    font-size: 92px;
+    color: rgb(46, 46, 46);
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/otf/Geist-Bold.otf?fileID=12800000&guid=687332127aedd234192bc3e7bd32c3df&type=3#Geist-Bold");
+    white-space: normal;
+}
+
+.heading2 {
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-Medium.ttf?fileID=12800000&guid=025d4c29715040c408de1d8060ca2aa2&type=3#Geist-Medium");
+    font-size: 54px;
+    color: rgb(78, 78, 78);
+    white-space: normal;
+}
+
+.body {
+    -unity-font-definition: url("project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-Regular.ttf?fileID=12800000&guid=5ee4fefaa23f79644aab60a8912937b9&type=3#Geist-Regular");
+    font-size: 32px;
+    color: rgb(78, 78, 78);
+    white-space: normal;
+}
+
+.image-container {
+    flex-grow: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+}
+
+.image {
+    flex-grow: 1;
+    background-image: url("project://database/Assets/src/core/art/glasses.jpg?fileID=2800000&guid=942be3fdefb3c7642b40f4a5f2fd3d8f&type=3#glasses");
+    width: 100%;
+    height: 100%;
+    background-size: 80% 80%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.dark-header {
+    color: rgb(240, 240, 240);
+}
+
+.dark-text {
+    color: rgb(224, 224, 224);
+}
+
+.dark-background {
+    background-color: rgb(30, 30, 30);
+    -unity-background-image-tint-color: rgb(111, 111, 111);
+}
+
+.dark-image {
+    -unity-background-image-tint-color: rgb(170, 170, 170);
 }

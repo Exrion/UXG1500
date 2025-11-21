@@ -181,7 +181,7 @@ MonoBehaviour:
   - Assets/Scenes/S3_CozyModern.unity
   - Assets/Scenes/VR_World.unity
   - Assets/Scenes/VR_World 1.unity
-  m_FirstSceneToLoad: 2
+  m_FirstSceneToLoad: 0
   m_StartupScenePath: Assets/Scenes/_Startup.unity
   m_PauseOnSceneSwitch: 0
 --- !u!4 &657120342

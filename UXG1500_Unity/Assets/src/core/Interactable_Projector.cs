@@ -5,7 +5,7 @@ using UnityEditor;
 
 class Interactable_Projector : IInteractable
 {
-    public S3_Projector_Script m_ProjectorScript;
+    public S3Projector_Script m_ProjectorScript;
 
     public override void OnInteracted()
     {

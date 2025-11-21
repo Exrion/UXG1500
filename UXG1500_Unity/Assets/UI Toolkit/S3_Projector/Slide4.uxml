@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/S3_Projector_Styles.uss?fileID=7433441132597879392&amp;guid=baeadb7bc49816d40a42a66b0d13d511&amp;type=3#S3_Projector_Styles" />
+    <ui:VisualElement name="Container" class="Container-White Container transition-base identifier-dark-bg">
+        <ui:Label text="Conclusion" class="heading1 transition-base identifier-dark-header" />
+        <ui:Label text="Our findings" class="heading2 transition-base identifier-dark-text" />
+        <ui:Label text="Dark Mode is more effective in the context of reading text. It helps with reducing visual fatigue and proves more comfortable and more aesthetically pleasing to users." class="body transition-base identifier-dark-text" style="-unity-text-align: upper-left;" />
+        <ui:Label text="Dark Mode isn&apos;t always the end all and be all of a comfortable reading experience. Ambient lighting conditions also play a part to a comfortable experience. " class="body transition-base identifier-dark-text" style="-unity-text-align: upper-left;" />
+        <ui:Label text="Too little or too much ambient light causing too many reflections or too much eye strain. " class="body transition-base identifier-dark-text" style="-unity-text-align: upper-left;" />
+        <ui:Label text="In order to properly design an effective Dark Mode, we must consider the environment around us in addition to the design of the interfaces. Users need to be given a choice in whether or not they want to use Dark Mode as it isn&apos;t always the solutiono to user interfaces." class="body transition-base identifier-dark-text" style="-unity-text-align: upper-left;" />
+    </ui:VisualElement>
+</ui:UXML>

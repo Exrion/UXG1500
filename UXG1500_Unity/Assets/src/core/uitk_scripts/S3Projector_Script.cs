@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class S3_Projector_Script : MonoBehaviour
+public class S3Projector_Script : MonoBehaviour
 {
     [SerializeField]
     List<VisualTreeAsset> m_SlideVisualTreeAssets = new();
@@ -14,6 +13,8 @@ public class S3_Projector_Script : MonoBehaviour
     UIDocument m_UIDocument;
     VisualElement m_RootVisualElement;
     VisualElement m_RootContainer;
+
+    bool m_DarkMode;
 
     private void OnEnable()
     {
@@ -28,6 +29,39 @@ public class S3_Projector_Script : MonoBehaviour
 
     void AdvanceSlides() => m_SlideCount = m_SlideCount >= m_Slides.Length - 1 ? -1 : m_SlideCount + 1;
     void InitSlides() => m_Slides = new TemplateContainer[m_SlideVisualTreeAssets.Count > 0 ? m_SlideVisualTreeAssets.Count : 0];
+
+    public void SwitchTheme()
+    {
+        m_DarkMode = !m_DarkMode;
+
+        List<VisualElement> bgs = m_RootContainer.Query(className: "identifier-dark-bg").ToList();
+        List<VisualElement> texts = m_RootContainer.Query(className: "identifier-dark-text").ToList();
+        List<VisualElement> headers = m_RootContainer.Query(className: "identifier-dark-header").ToList();
+        List<VisualElement> images = m_RootContainer.Query(className: "identifier-dark-image").ToList();
+
+        if (m_DarkMode)
+        {
+            foreach (VisualElement element in bgs)
+                element.AddToClassList("dark-background");
+            foreach (VisualElement element in texts)
+                element.AddToClassList("dark-text");
+            foreach (VisualElement element in headers)
+                element.AddToClassList("dark-header");
+            foreach (VisualElement element in images)
+                element.AddToClassList("dark-image");
+        }
+        else
+        {
+            foreach (VisualElement element in bgs)
+                element.RemoveFromClassList("dark-background");
+            foreach (VisualElement element in texts)
+                element.RemoveFromClassList("dark-text");
+            foreach (VisualElement element in headers)
+                element.RemoveFromClassList("dark-header");
+            foreach (VisualElement element in images)
+                element.RemoveFromClassList("dark-image");
+        }
+    }
 
     public void HandleInteracted()
     {
