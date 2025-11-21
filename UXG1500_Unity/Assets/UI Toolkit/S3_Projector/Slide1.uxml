@@ -6,7 +6,7 @@
         <ui:Label text="In a study conducted in 2019 (Kim et al., 2019), researchers studied the benefits of dark mode graphics in regard to visual acuity, fatigue and usability. This study consisted of ten male and nine female participants with either normal vision or corrected-to-normal vision (some through contact lenses, some through glasses)." class="body transition-base identifier-dark-text" />
         <ui:Label text="The participants were required to read aloud four passages from Pearson Test of English Read Aloud Practise Questions. Participants were then shown the passages on three different backgrounds. A uniform grey background, one with randomly generated grey-scale pixels, and one with a mixture of randomly generated RGB pixels." class="body transition-base identifier-dark-text" />
         <ui:VisualElement class="image-container transition-base" style="transition-delay: 0.1s;">
-            <ui:VisualElement class="image identifier-dark-image transition-base" />
+            <ui:VisualElement class="image identifier-dark-image transition-base" style="padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

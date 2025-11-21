@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/S3_Projector_Styles.uss?fileID=7433441132597879392&amp;guid=baeadb7bc49816d40a42a66b0d13d511&amp;type=3#S3_Projector_Styles" />
+    <ui:VisualElement name="Container" class="Container-White Container transition-base identifier-dark-bg">
+        <ui:Label text="The Test" class="heading1 transition-base identifier-dark-header" />
+        <ui:Label text="Try reading the following passages!" class="heading2 transition-base identifier-dark-text" />
+        <ui:Label text="On the next slide are some examples of the passages that the participants of the study read. They were told to read the passages with various backgrounds for the text, as well as in well-lit ambient conditions and with dimmed lighting." class="body transition-base identifier-dark-text" style="-unity-text-align: upper-left;" />
+        <ui:Label text="Try testing this our for yourself by turning on and off the switches to the left of this projector screen!" class="body transition-base identifier-dark-text" style="-unity-text-align: upper-left; -unity-font-definition: url(&quot;project://database/Assets/lib/fonts/geist-font-1.6.0/fonts/Geist/ttf/Geist-Black.ttf?fileID=12800000&amp;guid=cb079a29731d67a43ad4cf120c8e63d6&amp;type=3#Geist-Black&quot;);" />
+        <ui:VisualElement class="image-container transition-base" style="transition-delay: 0.1s; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+            <ui:VisualElement class="image identifier-dark-image transition-base" style="background-image: url(&quot;project://database/Assets/src/core/art/reading.jpg?fileID=2800000&amp;guid=e96d8420a7a84564eac3065851d9d114&amp;type=3#reading&quot;); -unity-background-scale-mode: scale-and-crop; background-size: cover;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
