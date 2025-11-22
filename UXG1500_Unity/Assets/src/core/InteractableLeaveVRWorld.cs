@@ -2,14 +2,11 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-class Interactable_SceneSwitch : IInteractable
+class InteractableLeaveVRWorld : IInteractable
 {
-    [SerializeField]
-    private int m_SceneIndex;
-
     public override void OnInteracted()
     {
-        GameManager.Instance.PrepareScene(m_SceneIndex);
+        GameManager.Instance.PrepareScene(3);
         GameManager.Instance.ArmSceneSwitch();
     }
 }
