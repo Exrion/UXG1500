@@ -23,6 +23,7 @@ public class InteractableController : MonoBehaviour
     private void Start()
     {
         m_InteractAction = InputSystem.actions.FindAction(m_InteractActionName);
+        m_InteractAction.Enable();
     }
 
     private void Update()

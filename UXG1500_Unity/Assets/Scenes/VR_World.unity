@@ -2412,7 +2412,7 @@ MonoBehaviour:
   OpenTheFuckUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 973796295}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: OpenDoor, Assembly-CSharp
         m_MethodName: HandleInteraction
         m_Mode: 1
@@ -3053,7 +3053,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 973796289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cfbfa626d0ec5c489daa5c825019973, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d3dc372cc55dad44b0029c693857ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenDoor
   openAngle: 90
@@ -6891,7 +6891,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1248767473399444269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cfbfa626d0ec5c489daa5c825019973, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d3dc372cc55dad44b0029c693857ff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenDoor
   openAngle: 90
