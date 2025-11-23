@@ -6,7 +6,7 @@ class InteractableLeaveVRWorld : IInteractable
 {
     public override void OnInteracted()
     {
-        GameManager.Instance.PrepareScene(3);
+        GameManager.Instance.PrepareScene(2);
         GameManager.Instance.ArmSceneSwitch();
     }
 }

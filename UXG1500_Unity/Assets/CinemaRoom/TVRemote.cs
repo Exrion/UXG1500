@@ -25,6 +25,7 @@ public class Interactable_TVRemote : IInteractable
     protected override void Update()
     {
         base.Update();
+        Debug.Log(videoPlayer.frame.ToString() + ", " + (videoPlayer.frameCount - 1).ToString());
         if (videoPlayer.frameCount - 1 == (ulong)videoPlayer.frame)
         {
             OpenTheFuckUp?.Invoke();

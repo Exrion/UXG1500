@@ -18336,6 +18336,7 @@ MonoBehaviour:
   m_SlideVisualTreeAssets:
   - {fileID: 9197481963319205126, guid: 76740c8cbd71d9f4e8fc60fcb5adebc5, type: 3}
   - {fileID: 9197481963319205126, guid: 70b09614814ce7245b7ac6de890a72ab, type: 3}
+  - {fileID: 9197481963319205126, guid: 6874f7ffe175cd24b9a274fc92596803, type: 3}
   - {fileID: 9197481963319205126, guid: 9403d7e0cc8d4174e81b1ba1030a1f1b, type: 3}
   - {fileID: 9197481963319205126, guid: 6af1693bbf2d5414cbd72894d83ebfdf, type: 3}
   - {fileID: 9197481963319205126, guid: c201379360c992c449a0c79e9e20708c, type: 3}

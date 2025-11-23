@@ -2412,7 +2412,7 @@ MonoBehaviour:
   OpenTheFuckUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 973796295}
         m_TargetAssemblyTypeName: OpenDoor, Assembly-CSharp
         m_MethodName: HandleInteraction
         m_Mode: 1
