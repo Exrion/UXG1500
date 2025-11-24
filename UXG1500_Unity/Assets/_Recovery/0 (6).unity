@@ -307,7 +307,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118244704}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
@@ -401,10 +401,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2614869606588409502, guid: 4ff008db1bfdbea47968a6e28aba8221, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ff008db1bfdbea47968a6e28aba8221, type: 3}
 --- !u!114 &161797958 stripped
 MonoBehaviour:
@@ -1318,10 +1315,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2614869606588409502, guid: 4ff008db1bfdbea47968a6e28aba8221, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ff008db1bfdbea47968a6e28aba8221, type: 3}
 --- !u!64 &476189825
 MeshCollider:
@@ -2399,20 +2393,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TVRemoteControl
   m_InteractableScript: {fileID: 161797958}
   m_InteractableDocument: {fileID: 1974759946}
-  m_SwivelDistance: 0.5
-  m_SwivelEnable: 1
   m_HUDDocument: {fileID: 0}
-  m_disableHUDOnInteract: 0
   m_FPSController: {fileID: 0}
+  m_disableHUDOnInteract: 0
   m_disableFPSControllerOnInteract: 0
   tvRemote: {fileID: 1182011128}
-  openDoor: {fileID: 973796295}
+  openDoor: {fileID: 973796291}
   tvIsOn: 0
   touchMEbABYONEMORETIME: 0
   OpenTheFuckUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 973796295}
+      - m_Target: {fileID: 973796291}
         m_TargetAssemblyTypeName: OpenDoor, Assembly-CSharp
         m_MethodName: HandleInteraction
         m_Mode: 1
@@ -2612,10 +2604,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2614869606588409502, guid: 4ff008db1bfdbea47968a6e28aba8221, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ff008db1bfdbea47968a6e28aba8221, type: 3}
 --- !u!4 &761152903 stripped
 Transform:
@@ -2942,7 +2931,7 @@ GameObject:
   - component: {fileID: 973796294}
   - component: {fileID: 973796293}
   - component: {fileID: 973796292}
-  - component: {fileID: 973796295}
+  - component: {fileID: 973796291}
   m_Layer: 0
   m_Name: Door Sheet
   m_TagString: Untagged
@@ -2967,6 +2956,21 @@ Transform:
   - {fileID: 1870786265}
   m_Father: {fileID: 1079422371}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &973796291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973796289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d3dc372cc55dad44b0029c693857ff8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OpenDoor
+  openAngle: 90
+  openSpeed: 2
+  isOpen: 0
 --- !u!65 &973796292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3044,21 +3048,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973796289}
   m_Mesh: {fileID: 8829246453336113423, guid: 6b91d8ef45459e948aac73a56830a8a5, type: 3}
---- !u!114 &973796295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973796289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d3dc372cc55dad44b0029c693857ff8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::OpenDoor
-  openAngle: 90
-  openSpeed: 2
-  isOpen: 0
 --- !u!1001 &981805946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5144,7 +5133,7 @@ Transform:
   m_GameObject: {fileID: 1759703640}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 237.256, y: 0.6653, z: 242.063}
+  m_LocalPosition: {x: 237.2946, y: 0.6653, z: 242.063}
   m_LocalScale: {x: 0.46858528, y: 1.3251668, z: 2.5965433}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5955,13 +5944,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactable_SceneSwitch
   m_InteractableScript: {fileID: 1654544}
   m_InteractableDocument: {fileID: 1654542}
-  m_SwivelDistance: 0.5
-  m_SwivelEnable: 1
   m_HUDDocument: {fileID: 0}
-  m_disableHUDOnInteract: 0
   m_FPSController: {fileID: 0}
+  m_disableHUDOnInteract: 0
   m_disableFPSControllerOnInteract: 0
-  m_SceneIndex: 4
+  m_SceneIndex: 2
 --- !u!114 &1941601349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6458,7 +6445,7 @@ GameObject:
   - component: {fileID: 1248767473399444274}
   - component: {fileID: 1248767473399444273}
   - component: {fileID: 1248767473399444276}
-  - component: {fileID: 1248767473399444277}
+  - component: {fileID: 1248767473399444275}
   m_Layer: 0
   m_Name: Door Sheet
   m_TagString: Untagged
@@ -6479,9 +6466,9 @@ Transform:
   m_LocalScale: {x: 0.5266, y: 0.5266, z: 0.5266}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 761152903}
   - {fileID: 1248767473976345858}
   - {fileID: 1248767473349417499}
+  - {fileID: 761152903}
   m_Father: {fileID: 1513465214}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1248767473399444271
@@ -6861,28 +6848,7 @@ MonoBehaviour:
     - {x: 0.08196551, y: 0.44963363, z: -0.8894444}
     - {x: -0.14785086, y: 0.4508504, z: -0.8802693}
     - {x: -0.14785086, y: -0.4508504, z: -0.8802693}
---- !u!114 &1248767473399444276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248767473399444269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a991f432f81e1e4eb3cdd781d294641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
-  m_InteractableScript: {fileID: 1974759945}
-  m_InteractableDocument: {fileID: 1974759946}
-  m_SwivelDistance: 0.5
-  m_SwivelEnable: 1
-  m_HUDDocument: {fileID: 0}
-  m_disableHUDOnInteract: 0
-  m_FPSController: {fileID: 0}
-  m_disableFPSControllerOnInteract: 0
-  m_openDoor: {fileID: 1248767473399444277}
---- !u!114 &1248767473399444277
+--- !u!114 &1248767473399444275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6897,6 +6863,25 @@ MonoBehaviour:
   openAngle: 90
   openSpeed: 2
   isOpen: 0
+--- !u!114 &1248767473399444276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248767473399444269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a991f432f81e1e4eb3cdd781d294641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorInteraction
+  m_InteractableScript: {fileID: 1974759945}
+  m_InteractableDocument: {fileID: 1974759946}
+  m_HUDDocument: {fileID: 0}
+  m_FPSController: {fileID: 0}
+  m_disableHUDOnInteract: 0
+  m_disableFPSControllerOnInteract: 0
+  m_openDoor: {fileID: 1248767473399444275}
 --- !u!1 &1248767473976345857
 GameObject:
   m_ObjectHideFlags: 0
