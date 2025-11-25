@@ -8594,7 +8594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CeilingLightsScript
   m_InteractableScript: {fileID: 1721178371}
   m_InteractableDocument: {fileID: 1721178369}
-  m_SwivelDistance: 1
+  m_SwivelDistance: 0.5
   m_SwivelEnable: 1
   m_HUDDocument: {fileID: 45230166}
   m_disableHUDOnInteract: 0
@@ -11444,7 +11444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081362006}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11778,7 +11778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactable_SceneSwitch
   m_InteractableScript: {fileID: 539916597}
   m_InteractableDocument: {fileID: 539916595}
-  m_SwivelDistance: 1
+  m_SwivelDistance: 0.5
   m_SwivelEnable: 1
   m_HUDDocument: {fileID: 45230166}
   m_disableHUDOnInteract: 0
