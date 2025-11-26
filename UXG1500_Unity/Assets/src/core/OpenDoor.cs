@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
+    public Transform doorsheetONLYFUCKINGROTATES;
     public float openAngle = 90f;
     public float openSpeed = 2f;
     public bool isOpen = false;
@@ -25,17 +26,21 @@ public class OpenDoor : MonoBehaviour
         _currentCoroutine = StartCoroutine(ToggleDoor());
     }
 
-    IEnumerator ToggleDoor()
-    {
-        Quaternion targetRotation = isOpen ? _closedRotation : _openRotation;
-        isOpen = !isOpen;
+     IEnumerator ToggleDoor()
+       {
+           Quaternion targetRotation = isOpen ? _closedRotation : _openRotation;
+           isOpen = !isOpen;
 
-        while (Quaternion.Angle(transform.rotation, targetRotation) > 0.01f)
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * openSpeed);
-            yield return null;
-        }
+           while (Quaternion.Angle(transform.rotation, targetRotation) > 0.01f)
+           {
+               transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * openSpeed);
+               yield return null;
+           }
 
-        transform.rotation = targetRotation;
-    }
+           transform.rotation = targetRotation;
+       }
+    
+
 }
+
+
